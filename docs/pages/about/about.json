@@ -1,0 +1,106 @@
+{
+  "title": "Smart & Sustainable Energy Systems Lab",
+  "subtitle": "Learn about our mission, research, facilities, and collaborations.",
+
+  "background_type": "color",
+  "background_value": "radial-gradient(circle at top left, rgba(34,195,255,0.25), transparent 50%), radial-gradient(circle at bottom right, rgba(250,204,21,0.18), transparent 55%), #050816",
+  "background_image": "",
+
+  "sections": [
+    {
+      "id": "overview",
+      "type": "text",
+      "title": "Overview",
+      "font_color": "#cbd5e1",
+      "background_type": "color",
+      "background_value": "transparent",
+      "background_image": "",
+      "content": [
+        "The Smart & Sustainable Energy Systems Lab is dedicated to advancing research, education, and innovation in modern energy systems.",
+        "Our work spans power systems, renewable integration, grid resilience, and interdisciplinary collaboration."
+      ]
+    },
+
+    {
+      "id": "mission",
+      "type": "text-image",
+      "title": "Mission & Vision",
+      "font_color": "#cbd5e1",
+      "background_type": "color",
+      "background_value": "#0d1224",
+      "background_image": "",
+      "image": "../../assets/about/misVis.jpg",
+      "content": [
+        "Our mission is to accelerate impactful discoveries that shape the future of sustainable and resilient energy infrastructure.",
+        "Our vision is to be a leader in energy systems innovation by fostering collaboration between academia, industry, and government."
+      ]
+    },
+
+    {
+      "id": "research",
+      "type": "text",
+      "title": "Research Areas",
+      "font_color": "#e2e8f0",
+      "background_type": "color",
+      "background_value": "linear-gradient(to right, #3a2758, #604175, #8a5b92)",
+      "background_image": "",
+      "content": [
+        "Our Lab conducts research across various domains:",
+        "- Grid modernization",
+        "- Renewable energy integration",
+        "- Microgrid design & control",
+        "- Energy storage systems",
+        "- Power electronics",
+        "- Cyber-physical energy systems"
+      ]
+    },
+
+    {
+      "id": "partners",
+      "type": "text-image",
+      "title": "Industry Partners",
+      "font_color": "#cbd5e1",
+      "background_type": "color",
+      "background_value": "linear-gradient(to bottom, #002b4d, #004970, #006793)",
+      "background_image": "",
+      "image": "../../assets/partners/partners.jpg",
+      "content": [
+        "We collaborate with utilities, manufacturers, engineering firms, and technology companies.",
+        "These partnerships enable real-world validation, technology transfer, and impactful applied research."
+      ]
+    },
+
+    {
+      "id": "facilities",
+      "type": "text-image",
+      "title": "Facilities",
+      "font_color": "#e2e8f0",
+      "background_type": "color",
+      "background_value": "#0f172a",
+      "background_image": "",
+      "image": "../../assets/about/facilities.jpg",
+      "content": [
+        "Our center houses several specialized laboratories such as:",
+        "- Smart Grid Laboratory",
+        "- Renewable Energy Research Room",
+        "- Energy Storage Diagnostic Lab"
+      ]
+    },
+
+    {
+      "id": "contact",
+      "type": "text",
+      "title": "Contact & Directions",
+      "font_color": "#cbd5e1",
+      "background_type": "color",
+      "background_value": "#3B4538",
+      "background_image": "",
+      "content": [
+        "SSESL at Tower-03, 11th Floor ,",
+        "Military Institute of Science and Technology.",
+        "Mirpur Cantonment, Dhaka-1216",
+        "Email: solardt@mist.ac.bd"
+      ]
+    }
+  ]
+}

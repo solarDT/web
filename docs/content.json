@@ -1,0 +1,329 @@
+{
+  "site": {
+    "logo_mark": "SSES",
+    "logo_image": "assets/logo.png",
+    "title": "Smart & Sustainable Energy Systems Lab",
+    "subtitle": "Military Institute of Science and Technology"
+  },
+
+
+
+
+  "branding": {
+    "ribbon_bg": "#0d1224",
+
+    "hero_background_type": "image",
+    "hero_background_value": "",
+    "hero_background_image": "assets/BannerImg.jpg"
+  },
+
+
+
+
+
+  "menu": [
+    {
+    "label": "About",
+    "link": "pages/about/about.html",
+    "submenu": [
+        { "label": "Overview", "link": "pages/about/about.html#overview" },
+        { "label": "Mission & Vision", "link": "pages/about/about.html#mission" },
+        { "label": "Research Areas", "link": "pages/about/about.html#research" },
+        { "label": "Industry Partners", "link": "pages/about/about.html#partners" },
+        { "label": "Facilities", "link": "pages/about/about.html#facilities" },
+        { "label": "Contact & Directions", "link": "pages/about/about.html#contact" }
+    ]
+    },
+
+    {
+  "label": "People",
+  "link": "pages/people/people.html",
+  "submenu": [
+    { "label": "Leadership", "link": "pages/people/people.html#leaders" },
+    { "label": "Researchers", "link": "pages/people/people.html#researchers" },
+    { "label": "Student & Research Team", "link": "pages/people/people.html#group" }
+  ]
+}
+,
+
+    {
+      "label": "Research Projects",
+      "link": "pages/research/ongoing_list.html",
+      "submenu": [
+        { "label": "Ongoing", "link": "pages/research/ongoing_list.html" },
+        { "label": "Completed", "link": "#" }
+      ]
+    }
+  ],
+
+
+
+
+
+
+
+  
+  "hero": {
+    "title": "Advancing the Future of Sustainable Energy Systems",
+    "text": "The Smart and Sustainable Energy Systems Lab connects students, researchers, and industry partners to develop resilient, low-carbon infrastructure for communities around the world.",
+
+    "buttons": [
+      { "label": "Explore Our Servies", "link": "#" },
+      { "label": "Partner with Us", "link": "#" }
+    ],
+
+    "numbers_title": "",
+    "numbers": [
+      
+    ],
+
+    "tagline": ""
+  },
+
+
+"news_events": {
+    "background_type": "color",
+    "background_value": "#080A21",
+    "background_image": "assets/news-events-bg.jpg",
+
+    "gallery": [
+      {
+        "image": "assets/galary/cc.png",
+        "caption": "Grant Signing Ceremony with BEPRC"
+      },
+      {
+        "image": "assets/galary/cc1.png",
+        "caption": "Grant Signing Ceremony with BEPRC"
+      },
+      
+      {
+        "image": "assets/galary/cc2.jpeg",
+        "caption": "Token of recognition from Astronergy"
+      },
+      {
+        "image": "assets/galary/cc3.jpg",
+        "caption": "Vendor Visits Measurement"
+      },
+      {
+        "image": "assets/galary/cc4.jpg",
+        "caption": "Vendor Visits for Measurement"
+      },
+      {
+        "image": "assets/galary/cc6.jpg",
+        "caption": "Weekly Lab Meeting Session"
+      },
+      {
+        "image": "assets/galary/cc7.jpeg",
+        "caption": "Newly allocated space for SSES Lab at MIST"
+      }
+    ],
+
+    "news": {
+      "section_title": "Latest News",
+      "items": [
+        {
+          "title": "Contract Signed between BEPRC & MIST EECE Dept.",
+          "text": "On 29 September 2025, Bangladesh Energy and Power Research Council (BEPRC) hosted the contract.....",
+          "link": "https://mist.ac.bd/department/eece/announcement/644/between_beprc_mist_eece_dept"
+        },
+        {
+          "title": "",
+          "text": "",
+          "link": "#"
+        }
+      ],
+      "view_all_link": "#"
+    },
+
+    "events": {
+      "section_title": "Upcoming Events",
+      "items": [
+        {
+          "month": "DEC",
+          "day": "15",
+          "title": "Tender Flashing",
+          "text": "Tender flashing for vendors in News Paper and Website.",
+          "link": "#"
+        },
+        {
+          "month": "FEB",
+          "day": "05",
+          "title": "Industry Networking Night",
+          "text": "Connect with partner organizations and alumni.",
+          "link": "#"
+        },
+        {
+          "month": "MAR",
+          "day": "21",
+          "title": "Graduate Research Expo",
+          "text": "Poster session featuring student-led research projects.",
+          "link": "#"
+        }
+      ],
+      "view_all_link": "#"
+    }
+  },
+
+
+
+
+
+  "highlights": {
+    "title": "What We Do",
+    "subtitle": "The center integrates education, research, and industry engagement to prepare the next generation of energy professionals.",
+
+    "background_type": "color", 
+    "background_value": "linear-gradient(135deg, #1e293b, #0f172a)", 
+    "background_image": "assets/highlights-bg.jpg",
+
+    "cards": [
+      {
+        "title": "Educate",
+        "text": "Students gain hands-on experience in energy systems, grid modernization, and sustainable infrastructure through curated curricula and design projects.",
+        "link_label": "Learn about our programs",
+        "link": "#"
+      },
+      {
+        "title": "Innovate",
+        "text": "Interdisciplinary teams collaborate on applied research...",
+        "link_label": "Explore research areas",
+        "link": "#"
+      },
+      {
+        "title": "Collaborate",
+        "text": "Industry partners co-create projects...",
+        "link_label": "View industry partnerships",
+        "link": "#"
+      }
+    ]
+  },
+
+  "partners": {
+    "title": "Strategic Partners",
+    "subtitle": "Our affiliates support research, workforce development, and large-scale demonstrations.",
+
+    "background_type": "color",
+    "background_value": "#756E41",
+    "background_image": "assets/partners/partners-bg.jpg",
+
+    "groups": [
+        
+      {"group_title": "Sponsors",
+        "items": [
+          {
+            "name": "Govt. of Bangladesh",
+            "logo": "assets/partners/BGD.jpg",
+            "link": "#"
+          },
+          {
+            "name": "Energy and Power Research Council Bangladesh",
+            "logo": "assets/partners/BEPRC.jpg",
+            "link": "#"
+          }
+        ]
+      },
+
+      {
+        "group_title": "Industry Partners",
+        "items": [
+          { "name": "VoltWorks", "logo": "assets/partners/Logo1.jpg" },
+          { "name": "VoltWorks", "logo": "assets/partners/Logo2.jpg" },
+          { "name": "VoltWorks", "logo": "assets/partners/Logo3.jpg" },
+          { "name": "VoltWorks", "logo": "assets/partners/Logo4.jpg" },
+          { "name": "VoltWorks", "logo": "assets/partners/Logo5.jpg" },
+          { "name": "VoltWorks", "logo": "assets/partners/Logo6.jpg" }
+        ]
+      }
+      
+    ]
+  },
+
+  "departments": {
+    "background_type": "color", 
+    "background_value": "linear-gradient(135deg, #1e293b, #0f172a)",
+    "background_image": "assets/departments-bg.jpg",
+
+    "items": [
+      {
+        "name": "Electrical Electronic and Communication Engineering",
+        "link": "https://mist.ac.bd/department/eece"
+      },
+  
+      {
+        "name": "Industrial & Production Engineering",
+        "link": "https://mist.ac.bd/department/ipe"
+      }
+    ]
+  },
+
+
+  "footer": {
+  "background_type": "color",
+  "background_value":  "linear-gradient(to top, #1a0e0e, #331C1C, #5c3a3a",
+  "background_image": "",
+
+  "text_color": "#0d1224",
+  "font_size": "0.9rem",
+
+  "logo": {
+    "mark": "SSES",
+    "image": "assets/logoF.jpg",
+    "title": "Smart & Sustainable Energy Systems Lab",
+    "subtitle": "",
+    
+    "text_color": "#F5FAFC",
+    "font_size": "1rem"
+  },
+
+  "address": [
+    "Military Institute of Science and Technology",
+    "Mirpur Cantonment, Dhaka-1216",
+    "solardt@mist.ac.bd"
+  ],
+
+  "address_style": {
+    "text_color": "#F5FAFC",
+    "font_size": "0.85rem"
+  },
+
+  "social": {
+    "mail": "solardt@mist.ac.bd"
+   
+  },
+
+  "social_style": {
+    "text_color": "#F5FAFC",
+    "font_size": "0.85rem"
+  },
+
+  "columns": [
+    {
+      "title": "Resources",
+      "title_style": { "text_color": "#F5FAFC", "font_size": "0.95rem" },
+      "links": [
+        { "label": "News", "link": "#" },
+        { "label": "Employment", "link": "#" },
+        { "label": "Internal Resources", "link": "#" }
+      ],
+      "link_style": { "text_color": "#F5FAFC", "font_size": "0.85rem" }
+    },
+    {
+      "title": "Campus Resources",
+      "title_style": { "text_color": "#F5FAFC", "font_size": "0.95rem" },
+      "links": [
+        { "label": "Maps & Directions", "link": "#" },
+        { "label": "Parking & Transportation", "link": "#" },
+        { "label": "Library", "link": "#" }
+      ],
+      "link_style": { "text_color": "#F5FAFC", "font_size": "0.85rem" }
+    }
+  ],
+
+  "bottom": {
+    "text": "© 2025 Military Institute of Science and Technology – Smart & Sustainable Energy System Lab . All rights reserved."
+  }
+}
+
+
+  
+}

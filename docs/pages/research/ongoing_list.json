@@ -1,0 +1,17 @@
+{
+  "style": {
+    "frame_width": "450px",
+    "frame_height": "420px",
+    "gradient": "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)"
+  },
+
+  "items": [
+    {
+      "label": "DEVELOPMENT OF AN ARTIFICIAL INTELLIGENCE ENABLED DIGITAL TWIN OF A SOLAR PHOTOVOLTAIC PLANT TO ENHANCE RENEWABLE PENETRATION IN POWER GRID OF BANGLADESH",
+      "pdf": "../../assets/research/agreement.pdf",
+      "color": "#22c3ff",
+      "size": "1rem",
+      "glow": true
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SnSESL</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" id="site-header">
+    <div class="site-header-inner">
+      <div class="site-logo">
+        <img id="logo-image" class="logo-image" alt="Logo">
+          <span id="logo-mark" class="logo-mark" style="display:none;"></span>
+          <span class="logo-text">
+            <span id="site-title" class="logo-title"></span>
+            <span id="site-subtitle" class="logo-subtitle"></span>
+          </span>
+      </div>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+
+      <nav id="main-nav" class="main-nav">
+        <ul id="menu-container" class="nav-list"></ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <main id="main-content">  
+    <!-- HERO -->
+    <section class="hero" id="hero-section">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <h1 id="hero-title"></h1>
+          <p id="hero-description"></p>
+
+          <div class="hero-actions" id="hero-buttons"></div>
+        </div>
+
+        <div class="hero-media">
+          <div class="hero-card">
+            <h2 id="numbers-title"></h2>
+            <ul id="numbers-list"></ul>
+          </div>
+
+          <div class="hero-tagline">
+            <span id="hero-tagline" class="pill"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- News & events style section -->
+    <section class="news-events" id="news-events-section">
+
+      <!-- Gallery slider -->
+      <div class="news-gallery" id="news-gallery"></div>
+
+      <div class="section-header">
+        <h2>News & Events</h2>
+        <p>Stay up to date with the latest stories and upcoming activities.</p>
+      </div>
+
+      <div class="two-column">
+
+        <!-- NEWS -->
+        <div class="column">
+          <h3 id="news-title"></h3>
+          <div id="news-list"></div>
+
+          <a href="#" class="card-link" id="news-view-all"></a>
+        </div>
+
+        <!-- EVENTS -->
+        <div class="column">
+          <h3 id="events-title"></h3>
+          <ul class="events-list" id="events-list"></ul>
+
+          <a href="#" class="card-link" id="events-view-all"></a>
+        </div>
+
+      </div>
+    </section>
+
+
+
+    <!-- Highlight cards similar to 'welcome' content blocks -->
+    <!-- "background_type": "color"or "image"
+    "background_value": "#111827" or "linear-gradient(135deg, #1e293b, #0f172a)"-->
+    <!-- or "background_image": "assets/highlights-bg.jpg" -->
+
+
+    <section class="highlights" id="highlights-section">
+      <div class="section-header">
+        <h2 id="highlights-title"></h2>
+        <p id="highlights-subtitle"></p>
+      </div>
+
+      <div id="highlights-cards" class="card-grid"></div>
+    </section>
+
+
+
+    <!-- Affiliates / partners style section -->
+    <section class="affiliates" id="partners-section">
+      <div class="section-header">
+        <h2 id="partners-title"></h2>
+        <p id="partners-subtitle"></p>
+      </div>
+
+      <div id="partners-groups" class="affiliates-groups"></div>
+    </section>
+
+
+    <!-- Departments / associated programs section -->
+    <section class="departments" id="departments-section">
+      <div class="section-header">
+        <h2>Connected Departments</h2>
+          <p>
+            The center collaborates with departments across engineering and
+            computing to deliver energy-focused learning pathways.
+          </p>
+      </div>
+
+      <div class="departments-list" id="departments-list"></div>
+    </section>
+
+
+
+    
+
+
+  <!-- Footer with resources, address, social etc. -->
+  <footer class="site-footer" id="footer-section">
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <div class="site-logo">
+          <img id="footer-logo-image" class="footer-logo-image" alt="Footer Logo">
+          
+            <span id="footer-logo-mark" style="display:none;"></span> <!-- fallback -->
+          
+            <span class="logo-text">
+            <span id="footer-logo-title"></span>
+            <span id="footer-logo-subtitle"></span>
+          </span>
+        </div>
+
+
+        <div class="footer-address" id="footer-address"></div>
+
+        <div class="footer-social" id="footer-social"></div>
+      </div>
+
+      <div class="footer-links" id="footer-columns"></div>
+    </div>
+
+    <div class="footer-bottom" id="footer-bottom"></div>
+  </footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

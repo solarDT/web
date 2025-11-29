@@ -1,0 +1,167 @@
+{
+
+    "hero": {
+    "background_type": "image",
+    "background_value": "",
+    "background_image": "../../assets/galary/IMG_20251111_153306.jpg",
+    "overlay": true,
+    "overlay_color": "rgba(0,0,0,0.45)"
+    },
+
+    "background_type": "gradient",
+    "background_value": "linear-gradient(135deg, #0d1224, #09101f)",
+
+    "title": "Our People",
+    "subtitle": "Meet the team behind the Smart & Sustainable Energy Systems Lab",
+
+  "sections": [
+    {
+      "id": "leaders",
+      "type": "leader",
+      "title": "Leadership",
+      "background_type": "color",
+      "background_value": "#050816",
+      "background_image": "",
+      "title_color": "#e5e7eb",
+      "text_color": "#cbd5e1",
+      "title_size": "1.6rem",
+      "font_size": "0.95rem",
+
+      "image_width": "260px",
+      "image_shape": "rounded",
+
+      "items": [
+        {
+          "name": "Major Shah Mohajjem Hossain, PhD",
+          "role": "Principal Investigator",
+          "image": "../../assets/people/moajjemSir.jpg",
+          "image_side": "left",
+          "image_width": "300px",
+          "image_shape": "rounded",
+          "description": [
+            "Dr. Shah leads the Smart & Sustainable Energy Systems Lab.",
+            "His research interests include Renewable Energy Technologies, Energy Harvesting and Storage, Power System Protection, Power System Reliability & Stability, Grid Integration of Inverter Based Resources and Application of AI in Power System and grid modernization."
+          ], 
+          "links": [
+            { "label": "Google Scholar", "link": "https://scholar.google.com/citations?user=c6w8HSEAAAAJ&hl=en&gmla=AJsN-F4nXEwyv6APg-Or4QvXhIR7ZlnjPBR4AZaqKsbQG7xpjZYjiSLG6NVyGnayoU2t2EeMZgkOTF96kirSCl5MEhgCV2NkiHG9xNyKEk70L3O7AjWMH9I&sciund=10031097862799281954" }
+          ]
+        },
+
+        {
+          "name": "Md Ahsan Kabir",
+          "role": "Co-Principal Investigator",
+          "image": "../../assets/people/ahsanSir.jpg",
+          "image_side": "right",
+          "description": [
+            "Mr. Ahsan coordinates interdisciplinary collaborations.",
+            "Her work spans Power system, Renewable Energy,  Smart Grid ,Energy Management, Demand Response, Energy Storage, Energy Audit, Artificial Intelligence, Machine and Deep Learning, Demand Forecasting"
+          ],
+          "links": [
+            { "label": "Google Scholar", "link": "https://scholar.google.com/citations?user=Nt4Lv9AAAAAJ&hl=en" }
+          ]
+        },
+        {
+          "name": "Mohammad Naim Uddin",
+          "role": "Co-Principal Investigator",
+          "image": "../../assets/people/Naim sir.jpg",
+          "image_side": "left",
+          "description": [
+            "Mr. Naim oversees embedded systems and AI research initiatives.",
+            "His work spans Embedded Systems, Artificial Intelligence (AI), Microprocessors, Microcontrollers and Programmable Circuits, Robotics, Smart Power System System"
+          ],
+          "links": [
+            { "label": "Profile", "link": "https://www.mist.ac.bd/department/eece/facultyMembers/mohammad_naim_uddin-773" }
+          ]
+        },{
+          "name": "Hasan Monir",
+          "role": "Lead Research Engineer",
+          "image": "../../assets/people/monirSir.jpg",
+          "image_side": "right",
+          "description": [
+            "Mr. Monir leads research teams and provides consultation on advanced engineering projects.",
+            "His work spans Power System and Energy Study"
+          ],
+          "links": [
+            { "label": "Google Scholar", "link": "https://scholar.google.com/citations?user=jmBR1XcAAAAJ&hl=en&authuser=1&oi=ao" }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "researchers",
+      "type": "researchers",
+      "title": "Researchers",
+      "background_type": "color",
+      "background_value": "#020617",
+      "background_image": "",
+      "title_color": "#e5e7eb",
+      "text_color": "#cbd5e1",
+      "title_size": "1.4rem",
+      "font_size": "0.92rem",
+
+      "image_width": "180px",
+      "image_shape": "rounded",
+
+      "items": [
+        {
+          "name": "Md Tanvir Rahman Sahed",
+          "title": "Graduate Research Assistant",
+          "bio": "Focus: AI/ML, Embedded Systems & IOT, Robotics & Automation, Renewable Energy",
+          "image": "../../assets/people/tanvir.jpg",
+          "image_width": "170px",
+          "image_shape": "",
+          "link": "#"
+        },
+        {
+          "name": "Md. Sabbir Hossain Molla",
+          "title": "Graduate Research Assistant",
+          "bio": "Focus: AI/ML, Power Electronics",
+          "image": "../../assets/people/sabbir.jpg",
+          "link": "#"
+        },
+        {
+          "name": "Rawnak Tanjim",
+          "title": "Graduate Research Assistant",
+          "bio": "AI/ML, Renewable Energy, Cyber-Security",
+          "image": "../../assets/people/rawnak.jpg",
+          "link": "#"
+        }
+      ]
+    },
+
+    {
+      "id": "group",
+      "type": "group",
+      "title": "Group Members",
+      "background_type": "color",
+      "background_value": "#050816",
+      "background_image": "",
+      "title_color": "#e5e7eb",
+      "text_color": "#cbd5e1",
+      "title_size": "1.4rem",
+      "font_size": "0.9rem",
+
+      "image_width": "160px",
+      "image_shape": "rounded",
+
+      "items": [
+        {
+          "name": "Md Razon Hossain",
+          "designation": "Plant Engineer(O&M)",
+          "image": "../../assets/people/razon.jpg"
+        },
+        {
+          "name": "Janibul Huq",
+          "designation": "Project Associate",
+          "image": "../../assets/people/def.jpg"
+        },
+        {
+          "name": "Minhajul Islam",
+          "designation": "Project Assistant",
+          "image": "../../assets/people/def.jpg"
+        }
+      ]
+    }
+  ]
+}

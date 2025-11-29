@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+
+  /* Much more academic & polished */
+  background: linear-gradient(
+    180deg,
+    #35076b 0%,
+    #271126 40%,
+    #6954c2 100%
+  );
+
+  color: #e5e7eb;
+}
+
+
+.home-button {
+  display: inline-block;
+  margin: 1rem;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  background: rgba(15,23,42,0.85);
+  border: 1px solid rgba(148,163,184,0.4);
+  color: #e5e7eb;
+  text-decoration: none;
+  transition: 0.15s;
+}
+.home-button:hover {
+  border-color: #22c3ff;
+  color: #22c3ff;
+}
+
+.frame-wrapper {
+  width: 100%;
+  height: calc(100vh - 100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects-frame {
+  width: 450px;
+  height: 420px;
+
+  padding: 1.6rem 1.4rem;
+
+  /* Academic style background */
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.04),
+    rgba(255,255,255,0.02)
+  );
+
+  border: 1px solid rgba(148,163,184,0.15);
+
+  border-radius: 12px;
+
+  /* softer shadow, not glossy */
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+
+  /* remove game look */
+  backdrop-filter: none;
+}
+
+
+.projects-frame h2 {
+  margin: 0 0 1rem;
+}
+
+.projects-list {
+  overflow-y: auto;
+  height: calc(100% - 50px);
+  padding-right: 6px;
+}
+
+.project-item {
+  margin-bottom: 1rem;
+  padding: 0.7rem 0.8rem;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: left;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid transparent;
+  transition: 0.2s;
+}
+
+.project-item:hover {
+  border-color: #22c3ff;
+  background: rgba(34,195,255,0.08);
+  transform: translateX(4px);
+}
+
+/* glowing text */
+.glow {
+  text-shadow: 0 0 10px rgba(34,195,255,0.5);
+}
