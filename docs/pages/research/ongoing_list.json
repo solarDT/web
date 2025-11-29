@@ -7,8 +7,8 @@
 
   "items": [
     {
-      "label": "DEVELOPMENT OF AN ARTIFICIAL INTELLIGENCE ENABLED DIGITAL TWIN OF A SOLAR PHOTOVOLTAIC PLANT TO ENHANCE RENEWABLE PENETRATION IN POWER GRID OF BANGLADESH",
-      "pdf": "../../assets/research/agreement.pdf",
+      "label": "AI-Enabled Digital Twin (BEPRC Project)",
+      "page": "solarDT/index.html",           
       "color": "#22c3ff",
       "size": "1rem",
       "glow": true

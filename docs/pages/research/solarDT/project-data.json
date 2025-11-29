@@ -1,0 +1,153 @@
+{
+  "lab": {
+    "name": "Smart and Sustainable Energy Systems Lab (SSES Lab)",
+    "tagline": "AI, Power Systems, and Renewable Integration"
+  },
+  "project": {
+    "title": "AI-Enabled Digital Twin of a Solar Photovoltaic Plant for Enhanced Renewable Integration in Bangladesh",
+    "tagline": "A government-funded digital twin framework for real-time solar forecasting and grid-aware analytics.",
+    "id": "EPRC/58-2025-020-01",
+    "durationDisplay": "October 2025 – September 2028",
+    "highlights": [
+      "Government-funded project supported by Bangladesh Energy and Power Research Council (BEPRC).",
+      "Total grant of BDT 1.63 crore (inclusive of VAT and taxes).",
+      "Development of a 100 kWp grid-connected rooftop PV test-bed at MIST.",
+      "AI-enabled digital twin for real-time monitoring, forecasting, and advanced analytics.",
+      "Validation against a 7.6 MWp utility-scale solar PV plant in Sirajganj, Bangladesh.",
+      "Creation of a high-resolution solar PV dataset tailored to Bangladesh."
+    ]
+  },
+  "funding": {
+    "agency": "Bangladesh Energy and Power Research Council (BEPRC)",
+    "amountDisplay": "BDT 1.63 crore (inclusive of VAT and taxes)",
+    "summary": "The project is fully funded by the Government of Bangladesh through BEPRC with a total allocation of BDT 1.63 crore. The grant covers the design and implementation of a 100 kWp rooftop PV test-bed, weather and communication infrastructure, AI modelling, validation on large-scale plants, and dissemination activities.",
+    "notes": "Funding is released over 13 milestone-based disbursements between FY 2025–26 and 2028–29, subject to satisfactory technical and financial progress."
+  },
+  "sections": {
+    "overview": "This project develops a national-scale, AI-enabled digital twin (DT) framework for grid-connected solar photovoltaic (PV) systems. Using high-resolution data from a 100 kWp rooftop PV test-bed at MIST and operational measurements from large-scale plants, the digital twin will support real-time monitoring, forecasting, and scenario analysis. The work directly supports Bangladesh's strategy to increase renewable penetration while maintaining grid reliability and operational efficiency.",
+    "motivation": "The rapid expansion of solar PV in Bangladesh introduces variability and uncertainty into power system operation. Grid operators have limited visibility of real-time PV output, and detailed EMT-based models of large PV portfolios are computationally expensive. There is also a lack of curated, high-quality datasets capturing local climatic and operational conditions. An AI-enabled digital twin offers a scalable solution by combining physical data, advanced learning algorithms, and system-level analytics to provide fast, accurate estimates of PV behaviour at different temporal and spatial scales.",
+    "objectives": [
+      "To develop a scalable digital twin model for a 100 kWp grid-connected rooftop PV system at MIST, designed to emulate the behaviour of utility-scale solar plants.",
+      "To integrate machine learning and deep learning algorithms into the digital twin for real-time monitoring and multi-horizon forecasting of PV output.",
+      "To evaluate the accuracy of the digital twin by comparing its outputs with high-resolution measurements from the 100 kWp test-bed.",
+      "To demonstrate the scalability of the developed architecture on smaller PV systems in the 20–50 kWp range.",
+      "To validate the digital twin against operational data from a 7.6 MWp solar power plant in Sirajganj, Bangladesh.",
+      "To build and publish a comprehensive, multi-feature solar PV dataset specific to Bangladesh for future research and policy analysis."
+    ],
+    "methodology": [
+      {
+        "title": "Physical Test-Bed Implementation",
+        "description": "Design and deploy a 100 kWp grid-connected rooftop PV system on the ECE Faculty Building at MIST, including PV modules, inverters, energy storage, mounting structures, and balance-of-system components."
+      },
+      {
+        "title": "Data Acquisition and Communication",
+        "description": "Install and integrate a weather station, digital instrumentation, PMU and data loggers, along with a secure communication infrastructure to collect time-synchronised environmental and electrical data from the test-bed."
+      },
+      {
+        "title": "Digital Twin Architecture",
+        "description": "Develop a modular digital twin architecture that ingests real-time data, applies signal conditioning and feature extraction, and runs AI models to estimate and forecast PV behaviour across multiple time horizons."
+      },
+      {
+        "title": "AI Modelling and Advanced Analytics",
+        "description": "Apply machine learning and deep learning techniques to build forecasting, anomaly detection, and performance benchmarking models that can support grid-aware operational decisions."
+      },
+      {
+        "title": "Scaling and Validation on Real-World Plants",
+        "description": "Extend and validate the digital twin using data from smaller distributed PV systems and a 7.6 MWp solar PV plant in Sirajganj, assessing scalability, robustness, and potential for integration with utility control centres."
+      }
+    ],
+    "impact": [
+      "Provision of a real-time, AI-enabled digital twin platform to support monitoring and forecasting of solar PV generation in Bangladesh.",
+      "Reduction of computational burden in large-scale PV integration studies by offering a digital twin that approximates plant behaviour without modelling every component in detail.",
+      "Improved grid reliability and situational awareness for system operators through predictive and diagnostic analytics.",
+      "Establishment of a reusable architecture for deploying digital twins in energy management centres and utility control rooms.",
+      "Creation of a high-quality, Bangladesh-specific solar dataset that can be used by researchers, policymakers, and industry partners.",
+      "Strengthening of national capacity in AI, smart grids, and renewable energy systems through collaborative work between academia and government."
+    ]
+  },
+  "team": [
+    {
+      "role": "Principal Investigator",
+      "name": "Major Shah Mohazzem Hossain, PhD",
+      "affiliation": "Department of EECE, Military Institute of Science and Technology (MIST)",
+      "email": "mohazzem_hossain@eece.mist.ac.bd"
+    },
+    {
+      "role": "Co-Principal Investigator",
+      "name": "Mohammad Naim Uddin",
+      "affiliation": "Department of EECE, Military Institute of Science and Technology (MIST)",
+      "email": "naim@eece.mist.ac.bd"
+    },
+    {
+      "role": "Co-Principal Investigator",
+      "name": "Md Ahsan Kabir",
+      "affiliation": "Department of EECE, Military Institute of Science and Technology (MIST)",
+      "email": "ahsan@eece.mist.ac.bd"
+    },
+    {
+      "role": "Lead Research Engineer",
+      "name": "Hasan Monir",
+      "affiliation": "Department of EECE, Military Institute of Science and Technology (MIST)",
+      "email": "monir@eece.mist.ac.bd"
+    },
+    {
+      "role": "Research Assistant",
+      "name": "Md. Tanvir Rahman Sahed",
+      "affiliation": "Department of EECE, Military Institute of Science and Technology (MIST)",
+      "email": "tanvir@eece.mist.ac.bd"
+    },
+    {
+      "role": "Research Assistant",
+      "name": "Md. Sabbir Hossain Molla",
+      "affiliation": "Department of EECE, Military Institute of Science and Technology (MIST)",
+      "email": "sabbir@eece.mist.ac.bd"
+    },
+    {
+      "role": "Research Assistant",
+      "name": "Rawnak Tanjim",
+      "affiliation": "Department of EECE, Military Institute of Science and Technology (MIST)",
+      "email": "rawnak@eece.mist.ac.bd"
+    }
+  ],
+  "timeline": [
+    {
+      "label": "Project start",
+      "value": "01 October 2025"
+    },
+    {
+      "label": "100 kWp PV test-bed installation and commissioning",
+      "value": "By mid-2026 (subject to procurement schedule)"
+    },
+    {
+      "label": "Data communication and net-metering integration",
+      "value": "2026–2027"
+    },
+    {
+      "label": "Core digital twin development and AI model training",
+      "value": "2027"
+    },
+    {
+      "label": "Scaling and validation on a 7.6 MWp plant",
+      "value": "2027–2028"
+    },
+    {
+      "label": "Final reporting and dissemination",
+      "value": "By November 2028"
+    }
+  ],
+  "resources": [
+    {
+      "label": "BEPRC Grant Information (internal document, PDF)",
+      "href": "#",
+      "note": "Available on request for authorised stakeholders.",
+      "external": false
+    },
+    {
+      "label": "Inception Report Template",
+      "href": "#",
+      "note": "Working draft for project reporting.",
+      "external": false
+    }
+  ],
+  "footerNote": "Project information maintained by the Smart and Sustainable Energy Systems Lab."
+}

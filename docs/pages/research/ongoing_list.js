@@ -28,7 +28,8 @@ function buildUI(data) {
     div.textContent = item.label;
 
     div.addEventListener("click", () => {
-      window.location.href = `pdf_viewer.html?file=${encodeURIComponent(item.pdf)}`;
+      window.location.href = item.page;
+
     });
 
     list.appendChild(div);
