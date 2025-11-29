@@ -24,6 +24,10 @@ function populateHeader(data) {
 }
 
 function populateHero(data) {
+    const bannerImg = document.getElementById("banner-image");
+    if (bannerImg && data.project.bannerImage) {
+        bannerImg.src = data.project.bannerImage;
+    }
   const projectTitleEl = document.getElementById("project-title");
   const projectTaglineEl = document.getElementById("project-tagline");
   const fundingAgencyEl = document.getElementById("funding-agency");

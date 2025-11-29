@@ -6,6 +6,7 @@
   "project": {
     "title": "AI-Enabled Digital Twin of a Solar Photovoltaic Plant for Enhanced Renewable Integration in Bangladesh",
     "tagline": "A government-funded digital twin framework for real-time solar forecasting and grid-aware analytics.",
+    "bannerImage": "../../../assets/galary/cc.png",
     "id": "EPRC/58-2025-020-01",
     "durationDisplay": "October 2025 – September 2028",
     "highlights": [
@@ -140,12 +141,6 @@
       "label": "BEPRC Grant Information (internal document, PDF)",
       "href": "#",
       "note": "Available on request for authorised stakeholders.",
-      "external": false
-    },
-    {
-      "label": "Inception Report Template",
-      "href": "#",
-      "note": "Working draft for project reporting.",
       "external": false
     }
   ],
