@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Project PDF Viewer</title>
+  <style>
+    body {
+      margin: 0;
+      background: #050816;
+      color: white;
+      font-family: system-ui, sans-serif;
+    }
+    iframe {
+      width: 100%;
+      height: 100vh;
+      border: none;
+    }
+    a {
+      display: inline-block;
+      margin: 1rem;
+      padding: 0.45rem 1rem;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.85);
+      border: 1px solid rgba(148,163,184,0.4);
+      color: #e5e7eb;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <a href="ongoing_list.html">← Back</a>
+
+  <iframe id="pdf-frame"></iframe>
+
+  <script>
+    const url = new URLSearchParams(window.location.search).get("file");
+    document.getElementById("pdf-frame").src = url;
+  </script>
+
+</body>
+</html>
