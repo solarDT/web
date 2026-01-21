@@ -2,14 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>People – SET Lab</title>
+  <title>People | SET Lab</title>
   <link rel="stylesheet" href="people.css">
   <script defer src="people.js"></script>
 </head>
 
-<body>
+<body class="people-page">
 
-  <a href="../../index.html" class="home-button">← Home</a>
+  <header class="page-shell">
+    <div class="page-bar">
+      <div class="page-links">
+        <a href="../../index.html" class="pill-link">Home</a>
+        <span class="divider">/</span>
+        <span class="crumb">People</span>
+      </div>
+      <span class="badge">People</span>
+    </div>
+  </header>
 
   <header class="people-hero" id="people-hero">
     <div class="people-hero-overlay" id="people-hero-overlay"></div>
@@ -18,7 +27,7 @@
       <h1 id="people-title"></h1>
       <p id="people-subtitle"></p>
     </div>
-</header>
+  </header>
 
 
   <main id="people-container"></main>

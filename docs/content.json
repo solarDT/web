@@ -143,24 +143,17 @@
       "section_title": "Upcoming Events",
       "items": [
         {
-          "month": "DEC",
+          "month": "JAN",
           "day": "15",
           "title": "Tender Flashing",
           "text": "Tender flashing for vendors in News Paper and Website.",
           "link": "#"
         },
         {
-          "month": "FEB",
-          "day": "05",
-          "title": "Industry Networking Night",
-          "text": "Connect with partner organizations and alumni.",
-          "link": "#"
-        },
-        {
-          "month": "MAR",
-          "day": "21",
-          "title": "Graduate Research Expo",
-          "text": "Poster session featuring student-led research projects.",
+          "month": "JAN",
+          "day": "22",
+          "title": "Pre-Bid Meeting",
+          "text": "Pre Bid meeting with vendors in MIST campus.",
           "link": "#"
         }
       ],

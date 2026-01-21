@@ -1,17 +1,21 @@
 {
-  "style": {
-    "frame_width": "450px",
-    "frame_height": "420px",
-    "gradient": "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)"
+  "page": {
+    "title": "Research Projects",
+    "intro": "Projects are sourced from their original Word documents and rendered into the web experience so formatting and imagery stay intact."
   },
-
-  "items": [
+  "projects": [
     {
-      "label": "DEVELOPMENT OF AN ARTIFICIAL INTELLIGENCE ENABLED DIGITAL TWIN OF A SOLAR PHOTOVOLTAIC PLANT TO ENHANCE RENEWABLE PENETRATION IN POWER GRID OF BANGLADESH",
-      "pdf": "../../assets/research/agreement.pdf",
-      "color": "#22c3ff",
-      "size": "1rem",
-      "glow": true
+      "id": "digital-twin-pv",
+      "title": "AI-Enabled Digital Twin of a Solar Photovoltaic Plant",
+      "summary": "Building a real-time digital twin to enhance grid penetration possibilities across a 100kWac solar facility.",
+      "status": "Ongoing",
+      "word_file": "../../assets/research/digital-twin.docx",
+      "images": [
+        "../../assets/galary/cc.png",
+        "../../assets/galary/cc5.webp",
+        "../../assets/galary/cc7.jpg"
+      ],
+      "tags": ["AI", "Digital Twin", "Solar", "Grid Integration"]
     }
   ]
 }

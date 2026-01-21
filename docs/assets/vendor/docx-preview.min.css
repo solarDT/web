@@ -1,0 +1,22 @@
+/* Minimal styling for docx-preview output */
+.docx {
+  color: #111827;
+  line-height: 1.6;
+  font-family: "Segoe UI", sans-serif;
+  padding: 1rem;
+}
+.docx p {
+  margin: 0 0 0.8rem;
+}
+.docx h1, .docx h2, .docx h3, .docx h4 {
+  margin: 1.2rem 0 0.6rem;
+  font-weight: 700;
+}
+.docx table {
+  border-collapse: collapse;
+}
+.docx table td,
+.docx table th {
+  border: 1px solid #d1d5db;
+  padding: 0.35rem 0.5rem;
+}

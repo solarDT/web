@@ -1,0 +1,57 @@
+{
+  "site": {
+    "logo_mark": "EIC",
+    "title": "Energy Innovation Center",
+    "subtitle": "Military Institute of Science and Technology"
+  },
+
+  "branding": {
+    "ribbon_bg": "#0d1224"
+  },
+
+  "menu": [
+    {
+      "label": "Welcome",
+      "link": "#",
+      "submenu": []
+    },
+    {
+      "label": "About",
+      "submenu": [
+        { "label": "Overview", "link": "#" },
+        { "label": "Mission & Vision", "link": "#" },
+        { "label": "History", "link": "#" }
+      ]
+    },
+    {
+      "label": "People",
+      "submenu": [
+        { "label": "Leadership", "link": "#" },
+        { "label": "Faculty", "link": "#" },
+        { "label": "Staff", "link": "#" }
+      ]
+    },
+    {
+      "label": "Education",
+      "submenu": [
+        { "label": "Undergraduate", "link": "#" },
+        { "label": "Graduate", "link": "#" }
+      ]
+    },
+    {
+      "label": "Research",
+      "submenu": [
+        { "label": "Areas", "link": "#" },
+        { "label": "Labs", "link": "#" },
+        { "label": "Publications", "link": "#" }
+      ]
+    },
+    {
+      "label": "Laboratories",
+      "submenu": [
+        { "label": "Smart Grid Lab", "link": "#" },
+        { "label": "Renewables Lab", "link": "#" }
+      ]
+    }
+  ]
+}
