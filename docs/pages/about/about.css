@@ -28,6 +28,17 @@ body.about-page {
 }
 
 /* Page bar */
+.page-top {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  backdrop-filter: blur(12px);
+}
+
+.page-top .page-shell {
+  padding: 12px 18px 12px;
+}
+
 .page-shell {
   max-width: 1100px;
   margin: 0 auto;
