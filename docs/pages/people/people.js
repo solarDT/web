@@ -88,7 +88,7 @@ function renderLeaderSection(parent, sec) {
     // Apply dominant color background
     if (item.image) {
       getDominantColor(item.image, (color) => {
-        const gradient = `linear-gradient(135deg, ${color}, rgba(0,0,0,0.55))`;
+        const gradient = `linear-gradient(-125deg, ${color}, rgba(133, 13, 13, 0.15))`;
         frame.style.setProperty("--auto-bg", gradient);
       });
     }

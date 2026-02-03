@@ -5,7 +5,7 @@
     "background_value": "",
     "background_image": "../../assets/people/bgPeople.jpg",
     "overlay": true,
-    "overlay_color": "rgba(0,0,0,0.45)"
+    "overlay_color": "rgba(0,0,0,0.65)"
     },
 
     "background_type": "gradient",
@@ -30,10 +30,23 @@
       "image_width": "260px",
       "image_shape": "rounded",
 
-      "items": [
+      "items": [ 
+        {
+          "name": "Md Ahsan Kabir",
+          "role": "Associate Professor",
+          "image": "../../assets/people/ahsanSir.jpg",
+          "image_side": "right",
+          "description": [
+            "Mr. Ahsan coordinates interdisciplinary collaborations.",
+            "His work spans Power system, Renewable Energy,  Smart Grid ,Energy Management, Demand Response, Energy Storage, Energy Audit, Artificial Intelligence, Machine and Deep Learning, Demand Forecasting"
+          ],
+          "links": [
+            { "label": "View Profile", "link": "https://scholar.google.com/citations?user=Nt4Lv9AAAAAJ&hl=en" }
+          ]
+        },
         {
           "name": "Maj. Shah Mohazzem Hossain, PhD",
-          "role": "Principal Investigator",
+          "role": "Assistant Professor",
           "image": "../../assets/people/moajjemSir.jpg",
           "image_side": "left",
           "image_width": "300px",
@@ -46,35 +59,9 @@
             { "label": "View Profile", "link": "https://scholar.google.com/citations?user=c6w8HSEAAAAJ&hl=en&gmla=AJsN-F4nXEwyv6APg-Or4QvXhIR7ZlnjPBR4AZaqKsbQG7xpjZYjiSLG6NVyGnayoU2t2EeMZgkOTF96kirSCl5MEhgCV2NkiHG9xNyKEk70L3O7AjWMH9I&sciund=10031097862799281954" }
           ]
         },
-
         {
-          "name": "Md Ahsan Kabir",
-          "role": "Co-Principal Investigator",
-          "image": "../../assets/people/ahsanSir.jpg",
-          "image_side": "right",
-          "description": [
-            "Mr. Ahsan coordinates interdisciplinary collaborations.",
-            "His work spans Power system, Renewable Energy,  Smart Grid ,Energy Management, Demand Response, Energy Storage, Energy Audit, Artificial Intelligence, Machine and Deep Learning, Demand Forecasting"
-          ],
-          "links": [
-            { "label": "View Profile", "link": "https://scholar.google.com/citations?user=Nt4Lv9AAAAAJ&hl=en" }
-          ]
-        },
-        {
-          "name": "Mohammad Naim Uddin",
-          "role": "Co-Principal Investigator",
-          "image": "../../assets/people/Naim sir.jpg",
-          "image_side": "left",
-          "description": [
-            "Mr. Naim oversees embedded systems and AI research initiatives.",
-            "His work spans Embedded Systems, Artificial Intelligence (AI), Microprocessors, Microcontrollers and Programmable Circuits, Robotics, Smart Power System System"
-          ],
-          "links": [
-            { "label": "View Profile", "link": "https://www.mist.ac.bd/department/eece/facultyMembers/mohammad_naim_uddin-773" }
-          ]
-        },{
           "name": "Hasan Monir",
-          "role": "Lead Research Engineer",
+          "role": "Assistant Professor",
           "image": "../../assets/people/monirSir.jpg",
           "image_side": "right",
           "description": [
@@ -83,6 +70,19 @@
           ],
           "links": [
             { "label": "View Profile", "link": "https://scholar.google.com/citations?user=jmBR1XcAAAAJ&hl=en&authuser=1&oi=ao" }
+          ]
+        },
+        {
+          "name": "Mohammad Naim Uddin",
+          "role": "Senior Lecturer",
+          "image": "../../assets/people/Naim sir.jpg",
+          "image_side": "left",
+          "description": [
+            "Mr. Naim oversees embedded systems and AI research initiatives.",
+            "His work spans Embedded Systems, Artificial Intelligence (AI), Microprocessors, Microcontrollers and Programmable Circuits, Robotics, Smart Power System System"
+          ],
+          "links": [
+            { "label": "View Profile", "link": "https://www.mist.ac.bd/department/eece/facultyMembers/mohammad_naim_uddin-773" }
           ]
         }
       ]

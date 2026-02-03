@@ -50,6 +50,16 @@
         { "label": "Ongoing", "link": "pages/research/ongoing_list.html" },
         { "label": "Completed", "link": "#" }
       ]
+    },
+    {
+      "label": "Publications",
+      "link": "#",
+      "submenu": [
+        { "label": "Journal Papers", "link": "#" },
+        { "label": "Conference Papers", "link": "#" },
+        { "label": "Book Chapters", "link": "#" },
+        { "label": "Patents", "link": "#" }
+      ]
     }
   ],
 
@@ -154,7 +164,7 @@
           "link": "#"
         }
       ],
-      "view_all_link": "#"
+      "view_all_link": "pages/news/news.html"
     },
 
     "events": {

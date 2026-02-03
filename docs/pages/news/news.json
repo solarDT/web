@@ -1,0 +1,17 @@
+{
+  "page": {
+    "title": "News",
+    "subtitle": "Updates, announcements, and highlights from the lab."
+  },
+  "items": [
+    {
+      "id": "sample-news",
+      "title": "Sample: Lab Update Announcement",
+      "date": "29 Jan 2026",
+      "category": "Notice Board",
+      "summary": "This is a sample news item. Replace the image and Word document with your real news content.",
+      "image": "../../assets/galary/cc.png",
+      "word_file": "../../assets/news/docx/sample-news.docx"
+    }
+  ]
+}

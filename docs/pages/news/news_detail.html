@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>News Detail</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="news.css">
+  <link rel="stylesheet" href="../../assets/vendor/docx-preview.min.css">
+  <script defer src="../../assets/vendor/jszip.min.js"></script>
+  <script defer src="../../assets/vendor/docx-preview.min.js"></script>
+  <script defer src="news_detail.js"></script>
+</head>
+
+<body class="news-detail-page">
+  <header class="page-shell">
+    <div class="page-bar">
+      <div class="page-links">
+        <a href="../../index.html" class="pill-link">Home</a>
+        <span class="divider">/</span>
+        <a href="news.html" class="pill-link">News</a>
+        <span class="divider">/</span>
+        <span class="crumb" id="news-crumb">Loading...</span>
+      </div>
+      <span class="badge" id="news-badge">News</span>
+    </div>
+  </header>
+
+  <main class="detail-shell">
+    <section class="detail-top">
+      <div>
+        <div class="detail-meta" id="news-meta"></div>
+        <h1 id="news-title">Loading...</h1>
+        <p id="news-summary"></p>
+      </div>
+      <div class="detail-image">
+        <img id="news-image" alt="">
+      </div>
+    </section>
+
+    <section class="docx-container">
+      <p id="docx-status" class="docx-status">Loading document...</p>
+      <div id="docx-root" class="docx-root"></div>
+    </section>
+  </main>
+</body>
+</html>
