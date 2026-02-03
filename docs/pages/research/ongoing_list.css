@@ -65,6 +65,7 @@ a:hover {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  flex-wrap: wrap;
   padding: 0.9rem 1.1rem;
   border: 1px solid var(--border);
   border-radius: 12px;
@@ -76,6 +77,9 @@ a:hover {
   align-items: center;
   gap: 0.5rem;
   font-size: 0.95rem;
+  min-width: 0;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
 }
 
 .crumb {
@@ -114,6 +118,8 @@ a:hover {
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.01em;
+  margin-left: auto;
+  white-space: nowrap;
 }
 
 .page-hero {
@@ -358,11 +364,6 @@ a:hover {
 
 /* Responsive */
 @media (max-width: 900px) {
-  .page-bar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
   .project-card {
     grid-template-columns: 1fr;
   }
