@@ -65,8 +65,7 @@
   
   "hero": {
     "title": "Advancing the Future of Sustainable Energy Systems",
-    "text": "The Smart Grid & Sustainable Energy Transition Lab connects students, researchers, and industry partners to develop resilient, low-carbon infrastructure for communities around the world.",
-
+    
     "buttons": [
       { "label": "Explore Our Servies", "link": "#" },
       { "label": "Partner with Us", "link": "#" }
@@ -78,6 +77,29 @@
     ],
 
     "tagline": ""
+  },
+
+  "welcome_overview": {
+    "background_type": "color",
+    "background_value": "linear-gradient(135deg, rgba(34,195,255,0.10), rgba(15,23,42,0.92))",
+    "background_image": "",
+
+    "title": "Welcome to the Smart Grid and Sustainable Energy Transition Lab",
+    "intro": [
+      "The Smart Grid and Sustainable Energy Transition Lab is a multidisciplinary research and innovation laboratory under the Department of Electrical, Electronic and Communication Engineering (EECE) at the Military Institute of Science and Technology (MIST). The lab is dedicated to advancing next-generation power systems, smart grid technologies, and sustainable energy solutions to support reliable, efficient, and low-carbon electricity systems.",
+      "The lab addresses emerging challenges in modern power systems, including increasing penetration of renewable energy, grid digitalization, energy security, and climate resilience. Through rigorous research, industry collaboration, and capacity building, the lab aims to contribute to Bangladesh’s national energy transition as well as global sustainability goals."
+    ],
+
+    "overview": {
+      "title": "Overview",
+      "bullets": [
+        "Multidisciplinary lab under EECE at MIST",
+        "Next-generation power systems and smart grids",
+        "Reliable, efficient, low-carbon electricity systems",
+        "Research, industry collaboration, and capacity building",
+        "Aligned with national transition and global sustainability goals"
+      ]
+    }
   },
 
 
@@ -218,16 +240,7 @@
             "link": "#"
           }
         ]
-      },
-
-      {
-        "group_title": "Industry Partners",
-        "items": [
-          { "name": "VoltWorks", "logo": "assets/partners/Logo2.jpg" }
-          
-        ]
       }
-      
     ]
   },
 

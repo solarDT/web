@@ -43,7 +43,7 @@
             "His research interests include Renewable Energy Technologies, Energy Harvesting and Storage, Power System Protection, Power System Reliability & Stability, Grid Integration of Inverter Based Resources and Application of AI in Power System and grid modernization."
           ], 
           "links": [
-            { "label": "Google Scholar", "link": "https://scholar.google.com/citations?user=c6w8HSEAAAAJ&hl=en&gmla=AJsN-F4nXEwyv6APg-Or4QvXhIR7ZlnjPBR4AZaqKsbQG7xpjZYjiSLG6NVyGnayoU2t2EeMZgkOTF96kirSCl5MEhgCV2NkiHG9xNyKEk70L3O7AjWMH9I&sciund=10031097862799281954" }
+            { "label": "View Profile", "link": "https://scholar.google.com/citations?user=c6w8HSEAAAAJ&hl=en&gmla=AJsN-F4nXEwyv6APg-Or4QvXhIR7ZlnjPBR4AZaqKsbQG7xpjZYjiSLG6NVyGnayoU2t2EeMZgkOTF96kirSCl5MEhgCV2NkiHG9xNyKEk70L3O7AjWMH9I&sciund=10031097862799281954" }
           ]
         },
 
@@ -54,10 +54,10 @@
           "image_side": "right",
           "description": [
             "Mr. Ahsan coordinates interdisciplinary collaborations.",
-            "Her work spans Power system, Renewable Energy,  Smart Grid ,Energy Management, Demand Response, Energy Storage, Energy Audit, Artificial Intelligence, Machine and Deep Learning, Demand Forecasting"
+            "His work spans Power system, Renewable Energy,  Smart Grid ,Energy Management, Demand Response, Energy Storage, Energy Audit, Artificial Intelligence, Machine and Deep Learning, Demand Forecasting"
           ],
           "links": [
-            { "label": "Google Scholar", "link": "https://scholar.google.com/citations?user=Nt4Lv9AAAAAJ&hl=en" }
+            { "label": "View Profile", "link": "https://scholar.google.com/citations?user=Nt4Lv9AAAAAJ&hl=en" }
           ]
         },
         {
@@ -70,7 +70,7 @@
             "His work spans Embedded Systems, Artificial Intelligence (AI), Microprocessors, Microcontrollers and Programmable Circuits, Robotics, Smart Power System System"
           ],
           "links": [
-            { "label": "Profile", "link": "https://www.mist.ac.bd/department/eece/facultyMembers/mohammad_naim_uddin-773" }
+            { "label": "View Profile", "link": "https://www.mist.ac.bd/department/eece/facultyMembers/mohammad_naim_uddin-773" }
           ]
         },{
           "name": "Hasan Monir",
@@ -82,7 +82,7 @@
             "His work spans Power System and Energy Study"
           ],
           "links": [
-            { "label": "Google Scholar", "link": "https://scholar.google.com/citations?user=jmBR1XcAAAAJ&hl=en&authuser=1&oi=ao" }
+            { "label": "View Profile", "link": "https://scholar.google.com/citations?user=jmBR1XcAAAAJ&hl=en&authuser=1&oi=ao" }
           ]
         }
       ]
@@ -133,7 +133,7 @@
     {
       "id": "group",
       "type": "group",
-      "title": "Stuffs",
+      "title": "Research Students",
       "background_type": "color",
       "background_value": "#050816",
       "background_image": "",
@@ -146,21 +146,28 @@
       "image_shape": "rounded",
 
       "items": [
-        {
-          "name": "Md Razon Hossain",
-          "designation": "Plant Engineer(O&M)",
-          "image": "../../assets/people/razon.jpg"
-        },
-        {
-          "name": "Janibul Huq",
-          "designation": "Project Associate",
-          "image": "../../assets/people/def.jpg"
-        },
-        {
-          "name": "Minhajul Islam",
-          "designation": "Project Assistant",
-          "image": "../../assets/people/def.jpg"
-        }
+        
+          
+      ]
+    },
+    {
+      "id": "group",
+      "type": "group",
+      "title": "Alumni",
+      "background_type": "color",
+      "background_value": "#050816",
+      "background_image": "",
+      "title_color": "#e5e7eb",
+      "text_color": "#cbd5e1",
+      "title_size": "1.4rem",
+      "font_size": "0.9rem",
+
+      "image_width": "160px",
+      "image_shape": "rounded",
+
+      "items": [
+        
+          
       ]
     }
   ]

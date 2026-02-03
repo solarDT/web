@@ -22,6 +22,46 @@
     },
 
     {
+      "id": "research",
+      "type": "domains-impact",
+      "title": "Research Areas",
+      "font_color": "#cbd5e1",
+      "background_type": "color",
+      "background_value": "transparent",
+      "background_image": "",
+      "domains": {
+        "title": "Thematic Research Domains and Focus Areas",
+        "cards": [
+          {
+            "title": "Smart Grids, Digitalization, and Power System Intelligence",
+            "text": "Research on smart grid technologies, digital power systems, and cyber-physical infrastructures, including advanced sensing, communication, automation, and AI-driven monitoring and control."
+          },
+          {
+            "title": "Renewable Energy, Energy Storage, and Electric Mobility",
+            "text": "Integration of renewable energy, energy storage systems, and electric vehicle infrastructure with power grids to enhance flexibility, reliability, and decarbonization."
+          },
+          {
+            "title": "Energy Efficiency, Demand Side Management",
+            "text": "Development of energy efficiency measures, demand-side management, and demand response strategies to optimize energy use, reduce peak demand, and improve system performance."
+          },
+          {
+            "title": "Power System Planning and Operation",
+            "text": "Analysis of long-term planning, real-time operation, and resilience of power systems under technical, economic, and climate-related uncertainties."
+          }
+        ]
+      },
+      "impact": {
+        "title": "Our Impact",
+        "items": [
+          "Evidence-based research supporting national energy policies",
+          "Industry-driven solutions for power utilities and energy stakeholders",
+          "Skilled human resource development in modern power engineering",
+          "International research collaboration and knowledge exchange"
+        ]
+      }
+    },
+
+    {
       "id": "mission",
       "type": "text-image",
       "title": "Mission & Vision",
@@ -33,25 +73,6 @@
       "content": [
         "Our mission is to accelerate impactful discoveries that shape the future of sustainable and resilient energy infrastructure.",
         "Our vision is to be a leader in energy systems innovation by fostering collaboration between academia, industry, and government."
-      ]
-    },
-
-    {
-      "id": "research",
-      "type": "text",
-      "title": "Research Areas",
-      "font_color": "#e2e8f0",
-      "background_type": "color",
-      "background_value": "linear-gradient(to right, #3a2758, #604175, #8a5b92)",
-      "background_image": "",
-      "content": [
-        "Our Lab conducts research across various domains:",
-        "- Grid modernization",
-        "- Renewable energy integration",
-        "- Microgrid design & control",
-        "- Energy storage systems",
-        "- Power electronics",
-        "- Cyber-physical energy systems"
       ]
     },
 
