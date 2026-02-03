@@ -26,26 +26,23 @@
     "label": "About",
     "link": "pages/about/about.html",
     "submenu": [
-        { "label": "Overview", "link": "pages/about/about.html#overview" },
-        { "label": "Mission & Vision", "link": "pages/about/about.html#mission" },
+        { "label": "About the Lab", "link": "pages/about/about.html#overview" },
         { "label": "Research Areas", "link": "pages/about/about.html#research" },
-        { "label": "Industry Partners", "link": "pages/about/about.html#partners" },
-        { "label": "Facilities", "link": "pages/about/about.html#facilities" },
+        { "label": "Mission & Vision", "link": "pages/about/about.html#mission" },
+        { "label": "Alignment ", "link": "pages/about/about.html#priorities" },
         { "label": "Contact & Directions", "link": "pages/about/about.html#contact" }
     ]
     },
 
     {
-  "label": "People",
-  "link": "pages/people/people.html",
-  "submenu": [
-    { "label": "Faculties", "link": "pages/people/people.html#leaders" },
-    { "label": "Researchers", "link": "pages/people/people.html#researchers" },
-    { "label": "Student & Research Team", "link": "pages/people/people.html#group" }
-  ]
-}
-,
-
+    "label": "People",
+    "link": "pages/people/people.html",
+    "submenu": [
+        { "label": "Core Team", "link": "pages/people/people.html#core team" },
+        { "label": "Researchers and Students", "link": "pages/people/people.html#researchers" },
+        { "label": "Lab Alumni Network", "link": "pages/people/people.html#alumni" }
+      ]
+    },
     {
       "label": "Research Projects",
       "link": "pages/research/ongoing_list.html",
@@ -67,8 +64,7 @@
     "title": "Advancing the Future of Sustainable Energy Systems",
     
     "buttons": [
-      { "label": "Explore Our Servies", "link": "#" },
-      { "label": "Partner with Us", "link": "#" }
+
     ],
 
     "numbers_title": "",
@@ -81,7 +77,7 @@
 
   "welcome_overview": {
     "background_type": "color",
-    "background_value": "linear-gradient(135deg, rgba(34,195,255,0.10), rgba(15,23,42,0.92))",
+    "background_value": "radial-gradient(circle at top left, rgba(34,195,255,0.25), transparent 50%), radial-gradient(circle at bottom right, rgba(250,204,21,0.18), transparent 55%), #050816",
     "background_image": "",
 
     "title": "Welcome to the Smart Grid and Sustainable Energy Transition Lab",
@@ -220,6 +216,8 @@
   "partners": {
     "title": "Strategic Partners",
     "subtitle": "Our affiliates support research, workforce development, and large-scale demonstrations.",
+
+    "logo_max_height": 100,
 
     "background_type": "color",
     "background_value": "#756E41",

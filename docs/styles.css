@@ -668,6 +668,8 @@ img {
 
 /* Affiliates / Strategic Partners Section */
 .affiliates {
+  --partner-logo-max-height: 70px;
+
   padding: 2.5rem 1.25rem 2.75rem;
 
   /* Background will be set dynamically via JSON,
@@ -731,7 +733,7 @@ img {
 
 /* Logos should appear clean, unboxed */
 .logo-placeholder img {
-  max-height: 55px;
+  max-height: var(--partner-logo-max-height, 70px);
   width: auto;
   object-fit: contain;
   display: block;

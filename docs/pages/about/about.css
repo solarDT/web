@@ -129,13 +129,39 @@ body.about-page {
   line-height: 1.6;
 }
 
+.about-text {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.about-bullets {
+  margin: 0.5rem 0 0.95rem;
+  padding-left: 1.25rem;
+}
+
+.about-bullets li {
+  margin: 0.35rem 0;
+  line-height: 1.6;
+}
+
 /* TEXT + IMAGE SECTION */
 .about-mixed {
   display: grid;
   grid-template-columns: minmax(0,1.1fr) minmax(0,1fr);
+  grid-template-areas: "text image";
   gap: 1.4rem;
+  align-items: start;
 }
-.about-mixed img {
+.about-mixed.image-left {
+  grid-template-areas: "image text";
+}
+
+.about-mixed__text {
+  grid-area: text;
+}
+
+.about-mixed__image {
+  grid-area: image;
   width: 100%;
   border-radius: 12px;
   border: 1px solid rgba(148,163,184,0.3);
@@ -206,6 +232,7 @@ body.about-page {
   color: rgba(229, 231, 235, 0.72);
   font-size: 0.95rem;
   line-height: 1.65;
+  text-align: justify;
 }
 
 .about-impact-frame {
@@ -249,11 +276,86 @@ body.about-page {
   color: rgba(229, 231, 235, 0.72);
   font-size: 0.95rem;
   line-height: 1.6;
+  text-align: justify;
+}
+
+.about-priorities {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.1rem;
+}
+
+.about-lead {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+  max-width: 72ch;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.about-priority-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0.9rem;
+}
+
+.about-priority {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 1.05rem 1.1rem 1.05rem 1.35rem;
+}
+
+.about-priority::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 6px;
+  background: linear-gradient(180deg, rgba(34, 195, 255, 0.9), rgba(250, 204, 21, 0.65));
+}
+
+.about-priority::after {
+  content: "";
+  position: absolute;
+  inset: -80px -80px auto auto;
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle, rgba(34, 195, 255, 0.16), transparent 62%);
+  pointer-events: none;
+}
+
+.about-priority-content {
+  position: relative;
+}
+
+.about-priority-content h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.02rem;
+  color: #e5e7eb;
+}
+
+.about-priority-content p {
+  margin: 0;
+  line-height: 1.6;
+  color: rgba(229, 231, 235, 0.76);
+  text-align: justify;
 }
 
 @media (max-width: 900px) {
   .about-mixed {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "text"
+      "image";
+  }
+
+  .about-mixed.image-left {
+    grid-template-areas:
+      "text"
+      "image";
   }
 
   .about-domain-grid {

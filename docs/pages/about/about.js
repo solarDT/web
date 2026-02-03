@@ -6,8 +6,8 @@ function loadAboutJSON() {
   fetch("about.json")
     .then(res => res.json())
     .then(data => {
-      document.getElementById("about-title").textContent = data.title;
-      document.getElementById("about-subtitle").textContent = data.subtitle;
+      setInlineText(document.getElementById("about-title"), data.title);
+      setInlineText(document.getElementById("about-subtitle"), data.subtitle);
 
       applyBackground(document.getElementById("about-hero"), data);
 
@@ -39,6 +39,129 @@ function scrollToHash() {
   });
 }
 
+function normalizeStringArray(content) {
+  if (!content) return [];
+  if (Array.isArray(content)) return content.map(item => String(item ?? ""));
+  return [String(content)];
+}
+
+function toCssLength(value) {
+  if (value === undefined || value === null || value === "") return null;
+  if (typeof value === "number" && Number.isFinite(value)) return `${value}px`;
+  return String(value);
+}
+
+function applyImageModifiers(img, wrapper, sec) {
+  if (!img || !wrapper || !sec) return;
+
+  const side = (sec.image_side || sec.image_position || "").toLowerCase();
+  if (side === "left") wrapper.classList.add("image-left");
+
+  const width = toCssLength(sec.image_width ?? sec.image_size);
+  if (width) img.style.width = width;
+
+  const height = toCssLength(sec.image_height);
+  if (height) img.style.height = height;
+
+  const maxWidth = toCssLength(sec.image_max_width);
+  if (maxWidth) img.style.maxWidth = maxWidth;
+
+  const objectFit = sec.image_object_fit || sec.image_fit;
+  if (objectFit) img.style.objectFit = objectFit;
+
+  const shiftX = toCssLength(sec.image_shift_x ?? sec.image_shift);
+  const shiftY = toCssLength(sec.image_shift_y);
+
+  if (shiftX || shiftY) {
+    img.style.transform = `translate(${shiftX || "0px"}, ${shiftY || "0px"})`;
+  }
+}
+
+function setInlineText(el, text) {
+  if (!el) return;
+  el.textContent = "";
+  appendInlineMarkup(el, text);
+}
+
+function appendInlineMarkup(target, text) {
+  if (!target) return;
+
+  const str = String(text ?? "");
+  let i = 0;
+
+  while (i < str.length) {
+    if (str.startsWith("**", i)) {
+      const close = str.indexOf("**", i + 2);
+      if (close === -1) {
+        target.appendChild(document.createTextNode(str.slice(i)));
+        break;
+      }
+
+      const strong = document.createElement("strong");
+      appendInlineMarkup(strong, str.slice(i + 2, close));
+      target.appendChild(strong);
+      i = close + 2;
+      continue;
+    }
+
+    if (str[i] === "<") {
+      const close = str.indexOf(">", i + 1);
+      if (close === -1) {
+        target.appendChild(document.createTextNode(str.slice(i)));
+        break;
+      }
+
+      const em = document.createElement("em");
+      appendInlineMarkup(em, str.slice(i + 1, close));
+      target.appendChild(em);
+      i = close + 1;
+      continue;
+    }
+
+    let next = str.length;
+    const nextBold = str.indexOf("**", i);
+    if (nextBold !== -1 && nextBold < next) next = nextBold;
+    const nextItalic = str.indexOf("<", i);
+    if (nextItalic !== -1 && nextItalic < next) next = nextItalic;
+
+    target.appendChild(document.createTextNode(str.slice(i, next)));
+    i = next;
+  }
+}
+
+function renderContent(container, content) {
+  const lines = normalizeStringArray(content);
+  let list = null;
+
+  lines.forEach(line => {
+    if (!line.trim()) {
+      list = null;
+      return;
+    }
+
+    const bulletMatch = line.trimStart().match(/^#\s*(.*)$/);
+
+    if (bulletMatch) {
+      if (!list) {
+        list = document.createElement("ul");
+        list.className = "about-bullets";
+        container.appendChild(list);
+      }
+
+      const li = document.createElement("li");
+      appendInlineMarkup(li, bulletMatch[1]);
+      list.appendChild(li);
+      return;
+    }
+
+    list = null;
+
+    const p = document.createElement("p");
+    appendInlineMarkup(p, line);
+    container.appendChild(p);
+  });
+}
+
 function buildSections(sections) {
   const container = document.getElementById("about-container");
   container.innerHTML = "";
@@ -49,22 +172,18 @@ function buildSections(sections) {
     div.id = sec.id;
 
     applyBackground(div, sec);
-    div.style.color = sec.font_color;
+    if (sec.font_color) div.style.color = sec.font_color;
 
     // Section title
     const h2 = document.createElement("h2");
-    h2.textContent = sec.title;
+    setInlineText(h2, sec.title);
     div.appendChild(h2);
 
     if (sec.type === "text") {
       const wrapper = document.createElement("div");
       wrapper.classList.add("about-text");
 
-      sec.content.forEach(p => {
-        const el = document.createElement("p");
-        el.textContent = p;
-        wrapper.appendChild(el);
-      });
+      renderContent(wrapper, sec.content);
 
       div.appendChild(wrapper);
     }
@@ -74,21 +193,19 @@ function buildSections(sections) {
       wrapper.classList.add("about-mixed");
 
       const textDiv = document.createElement("div");
-      textDiv.classList.add("about-text");
+      textDiv.classList.add("about-text", "about-mixed__text");
 
-      sec.content.forEach(p => {
-        const el = document.createElement("p");
-        el.textContent = p;
-        textDiv.appendChild(el);
-      });
+      renderContent(textDiv, sec.content);
 
       const img = document.createElement("img");
+      img.classList.add("about-mixed__image");
       img.src = sec.image;
       img.alt = sec.title;
 
       wrapper.appendChild(textDiv);
       wrapper.appendChild(img);
 
+      applyImageModifiers(img, wrapper, sec);
       div.appendChild(wrapper);
     }
 
@@ -101,7 +218,7 @@ function buildSections(sections) {
 
       if (sec.domains?.title) {
         const h3 = document.createElement("h3");
-        h3.textContent = sec.domains.title;
+        setInlineText(h3, sec.domains.title);
         domainsBlock.appendChild(h3);
       }
 
@@ -118,11 +235,11 @@ function buildSections(sections) {
         article.appendChild(badge);
 
         const h4 = document.createElement("h4");
-        h4.textContent = card.title || "";
+        setInlineText(h4, card.title || "");
         article.appendChild(h4);
 
         const p = document.createElement("p");
-        p.textContent = card.text || "";
+        setInlineText(p, card.text || "");
         article.appendChild(p);
 
         domainsGrid.appendChild(article);
@@ -136,7 +253,7 @@ function buildSections(sections) {
 
       if (sec.impact?.title) {
         const h3 = document.createElement("h3");
-        h3.textContent = sec.impact.title;
+        setInlineText(h3, sec.impact.title);
         impactFrame.appendChild(h3);
       }
 
@@ -153,7 +270,7 @@ function buildSections(sections) {
         card.appendChild(icon);
 
         const p = document.createElement("p");
-        p.textContent = text;
+        setInlineText(p, text);
         card.appendChild(p);
 
         impactGrid.appendChild(card);
@@ -162,6 +279,53 @@ function buildSections(sections) {
       impactFrame.appendChild(impactGrid);
       wrapper.appendChild(impactFrame);
 
+      div.appendChild(wrapper);
+    }
+
+    if (sec.type === "priority-list") {
+      const wrapper = document.createElement("div");
+      wrapper.classList.add("about-priorities");
+
+      if (sec.lead) {
+        const lead = document.createElement("p");
+        lead.classList.add("about-lead");
+        setInlineText(lead, sec.lead);
+        wrapper.appendChild(lead);
+      }
+
+      const list = document.createElement("div");
+      list.classList.add("about-priority-list");
+
+      const items = Array.isArray(sec.items) ? sec.items : [];
+      items.forEach(item => {
+        const row = document.createElement("div");
+        row.classList.add("about-priority");
+
+        const content = document.createElement("div");
+        content.classList.add("about-priority-content");
+
+        if (typeof item === "string") {
+          const p = document.createElement("p");
+          setInlineText(p, item);
+          content.appendChild(p);
+        } else if (item && typeof item === "object") {
+          if (item.title) {
+            const h3 = document.createElement("h3");
+            setInlineText(h3, item.title);
+            content.appendChild(h3);
+          }
+          if (item.text) {
+            const p = document.createElement("p");
+            setInlineText(p, item.text);
+            content.appendChild(p);
+          }
+        }
+
+        row.appendChild(content);
+        list.appendChild(row);
+      });
+
+      wrapper.appendChild(list);
       div.appendChild(wrapper);
     }
 

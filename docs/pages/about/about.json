@@ -10,14 +10,14 @@
     {
       "id": "overview",
       "type": "text",
-      "title": "Overview",
+      "title": "About the Lab",
       "font_color": "#cbd5e1",
       "background_type": "color",
-      "background_value": "transparent",
+      "background_value": "#0d1224",
       "background_image": "",
       "content": [
-        "The Smart Grid & Sustainable Energy Transition Lab is dedicated to advancing research, education, and innovation in modern energy systems.",
-        "Our work spans power systems, renewable integration, grid resilience, and interdisciplinary collaboration."
+        "The Smart Grid and Sustainable Energy Transition Lab was established to respond to the rapid transformation of electricity systems driven by renewable energy integration, digital technologies and decarbonization goals. The lab serves as a platform for applied research, system analysis, pilot studies, and capacity development in the power and energy sector.",
+        "Operating within the academic environment of MIST, the lab integrates theoretical research with practical implementation, emphasizing solutions that are technically sound, economically viable, and policy-relevant."  
       ]
     },
 
@@ -27,7 +27,7 @@
       "title": "Research Areas",
       "font_color": "#cbd5e1",
       "background_type": "color",
-      "background_value": "transparent",
+      "background_value": "linear-gradient(150deg, rgba(64,0,250,0.08), rgba(13,100,16,0.96))",
       "background_image": "",
       "domains": {
         "title": "Thematic Research Domains and Focus Areas",
@@ -67,47 +67,40 @@
       "title": "Mission & Vision",
       "font_color": "#cbd5e1",
       "background_type": "color",
-      "background_value": "#0d1224",
+      "background_value": "linear-gradient(10deg, rgba(13,70,36,0.96), rgba(64,0,0,0.08))",
       "background_image": "",
       "image": "../../assets/about/misVis.jpg",
+      "image_side": "left",
       "content": [
-        "Our mission is to accelerate impactful discoveries that shape the future of sustainable and resilient energy infrastructure.",
-        "Our vision is to be a leader in energy systems innovation by fostering collaboration between academia, industry, and government."
+        "**Vision**",
+        "To become an international research center in smart grid and sustainable energy research, contributing to resilient, secure, and low-carbon power systems at national and regional levels.",
+        "",
+        "**Mission**",
+        "# Conduct high-quality research on smart grids and sustainable energy systems",
+        "# Support energy transition and energy security through evidence-based analysis",
+        "# Strengthen industry–academia collaboration in power and energy sectors",
+        "# Train future engineers and researchers with practical, future-ready skills",
+        "# Contribute to national and global energy and climate goals"
       ]
     },
 
     {
-      "id": "partners",
-      "type": "text-image",
-      "title": "Industry Partners",
+      "id": "priorities",
+      "type": "priority-list",
+      "title": "Alignment with National and Global Priorities",
       "font_color": "#cbd5e1",
       "background_type": "color",
-      "background_value": "linear-gradient(to bottom, #002b4d, #004970, #006793)",
+      "background_value": "linear-gradient(135deg, rgba(34,195,255,0.08), rgba(13,18,36,0.96))",
       "background_image": "",
-      "image": "../../assets/partners/partners.jpg",
-      "content": [
-        "We collaborate with utilities, manufacturers, engineering firms, and technology companies.",
-        "These partnerships enable real-world validation, technology transfer, and impactful applied research."
+      "lead": "The lab's research is aligned with:",
+      "items": [
+        "Bangladesh's Power System Master Plan (PSMP)",
+        "Renewable energy and energy efficiency targets",
+        "Smart grid roadmaps and digital transformation strategies",
+        "Sustainable Development Goals (SDGs)",
+        "Climate change mitigation and adaptation frameworks"
       ]
     },
-
-    {
-      "id": "facilities",
-      "type": "text-image",
-      "title": "Facilities",
-      "font_color": "#e2e8f0",
-      "background_type": "color",
-      "background_value": "#0f172a",
-      "background_image": "",
-      "image": "../../assets/about/facilities.jpg",
-      "content": [
-        "Our Lab houses several specialized field of works such as:",
-        "- Smart Grid",
-        "- Renewable Energy Research",
-        "- Energy Storage Diagnostic"
-      ]
-    },
-
     {
       "id": "contact",
       "type": "text",

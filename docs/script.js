@@ -302,6 +302,13 @@ function applyPartners(partners) {
   // Background
   const section = document.getElementById("partners-section");
 
+  if (partners.logo_max_height !== undefined && partners.logo_max_height !== null && partners.logo_max_height !== "") {
+    const heightValue = typeof partners.logo_max_height === "number"
+      ? `${partners.logo_max_height}px`
+      : String(partners.logo_max_height);
+    section.style.setProperty("--partner-logo-max-height", heightValue);
+  }
+
   if (partners.background_type === "color") {
     section.style.background = partners.background_value;
   }

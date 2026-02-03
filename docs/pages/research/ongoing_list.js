@@ -66,14 +66,6 @@ function renderProjects(projects) {
     detailsBtn.textContent = "View details";
     actions.appendChild(detailsBtn);
 
-    if (project.word_file) {
-      const hint = document.createElement("span");
-      hint.className = "file-hint";
-      const fileName = project.word_file.split("/").pop();
-      hint.textContent = `Source: ${fileName}`;
-      actions.appendChild(hint);
-    }
-
     textCol.appendChild(actions);
 
     const mediaCol = buildImageStrip(project.images, project.title);
