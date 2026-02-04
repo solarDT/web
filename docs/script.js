@@ -279,17 +279,69 @@ function applyHighlights(highlights) {
   const grid = document.getElementById("highlights-cards");
   grid.innerHTML = "";
 
+  function extractBullets(rawText) {
+    const raw = String(rawText || "").trim();
+    if (!raw) return null;
+
+    const hasBullet =
+      /(?:^|<br\s*\/?>)\s*(?:•|&bull;|&#8226;|\u2022)\s*/i.test(raw) ||
+      /^\s*(?:•|&bull;|&#8226;|\u2022)\s+/i.test(raw);
+
+    if (!hasBullet) return null;
+
+    return raw
+      .split(/<br\s*\/?>/gi)
+      .map(part => String(part || "")
+        .replace(/^\s*(?:•|&bull;|&#8226;|\u2022)\s*/i, "")
+        .trim()
+      )
+      .filter(Boolean);
+  }
+
   highlights.cards.forEach(card => {
-    const div = document.createElement("article");
-    div.classList.add("card");
+    const article = document.createElement("article");
+    article.classList.add("card");
 
-    div.innerHTML = `
-      <h3>${card.title}</h3>
-      <p>${card.text}</p>
-      <a href="${card.link}" class="card-link">${card.link_label}</a>
-    `;
+    const title = document.createElement("h3");
+    title.textContent = card.title || "";
+    article.appendChild(title);
 
-    grid.appendChild(div);
+    const bullets = extractBullets(card.text);
+    if (bullets && bullets.length) {
+      const ul = document.createElement("ul");
+      ul.className = "card-bullets";
+
+      bullets.forEach(text => {
+        const li = document.createElement("li");
+        li.textContent = text;
+        ul.appendChild(li);
+      });
+
+      article.appendChild(ul);
+    } else {
+      const p = document.createElement("p");
+      const rawText = String(card.text || "");
+
+      if (rawText.includes("<br")) {
+        p.innerHTML = rawText;
+      } else {
+        p.textContent = rawText;
+      }
+
+      article.appendChild(p);
+    }
+
+    const linkLabel = String(card.link_label || "").trim();
+    const link = String(card.link || "").trim();
+    if (linkLabel && link) {
+      const a = document.createElement("a");
+      a.href = link;
+      a.className = "card-link";
+      a.textContent = linkLabel;
+      article.appendChild(a);
+    }
+
+    grid.appendChild(article);
   });
 }
 
@@ -449,51 +501,176 @@ function applyNewsEvents(section) {
   /* ------------------------
      NEWS SECTION
   -------------------------*/
-  document.getElementById("news-title").textContent = section.news.section_title;
+  const newsConfig = section.news || {};
+  document.getElementById("news-title").textContent = newsConfig.section_title || "";
 
   const newsList = document.getElementById("news-list");
   newsList.innerHTML = "";
 
-  section.news.items.forEach(n => {
-    const card = document.createElement("article");
-    card.classList.add("news-card");
-    card.innerHTML = `
-      <h4>${n.title}</h4>
-      <p>${n.text}</p>
-      <a href="${n.link}" class="card-link">Read more</a>
-    `;
-    newsList.appendChild(card);
-  });
-
   document.getElementById("news-view-all").textContent = "View all news";
-  document.getElementById("news-view-all").href = section.news.view_all_link;
+  document.getElementById("news-view-all").href = newsConfig.view_all_link || "#";
+
+  const newsMonthIndexMap = {
+    JAN: 0,
+    FEB: 1,
+    MAR: 2,
+    APR: 3,
+    MAY: 4,
+    JUN: 5,
+    JUL: 6,
+    AUG: 7,
+    SEP: 8,
+    OCT: 9,
+    NOV: 10,
+    DEC: 11
+  };
+
+  function getNewsTimestamp(item) {
+    if (!item) return 0;
+
+    const dateText = String(item.date || "").trim();
+    const match = dateText.match(/^(\d{1,2})\s+([A-Za-z]{3,})\s+(\d{4})$/);
+    if (match) {
+      const day = Number.parseInt(match[1], 10);
+      const monthKey = String(match[2]).slice(0, 3).toUpperCase();
+      const year = Number.parseInt(match[3], 10);
+      const monthIndex = newsMonthIndexMap[monthKey];
+
+      if (Number.isFinite(day) && Number.isFinite(year) && monthIndex !== undefined) {
+        return Date.UTC(year, monthIndex, day);
+      }
+    }
+
+    const parsed = Date.parse(dateText);
+    return Number.isFinite(parsed) ? parsed : 0;
+  }
+
+  fetch("pages/news/news.json")
+    .then(res => {
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return res.json();
+    })
+    .then(data => {
+      const items = Array.isArray(data.items) ? data.items : [];
+
+      const latest = items
+        .filter(item => item && item.title && item.id)
+        .sort((a, b) => getNewsTimestamp(b) - getNewsTimestamp(a))
+        .slice(0, 3);
+
+      if (!latest.length) {
+        const empty = document.createElement("div");
+        empty.className = "empty-state";
+        empty.textContent = "No news published yet.";
+        newsList.appendChild(empty);
+        return;
+      }
+
+      latest.forEach(item => {
+        const detailHref = `pages/news/news_detail.html?id=${encodeURIComponent(item.id)}`;
+
+        const card = document.createElement("article");
+        card.classList.add("news-card");
+        card.innerHTML = `
+          <h4>${item.title}</h4>
+          <p>${item.summary || ""}</p>
+          <a href="${detailHref}" class="card-link">Read more</a>
+        `;
+        newsList.appendChild(card);
+      });
+    })
+    .catch(err => {
+      console.error("News load error:", err);
+      const empty = document.createElement("div");
+      empty.className = "empty-state";
+      empty.textContent = "Unable to load news right now.";
+      newsList.appendChild(empty);
+    });
 
 
   /* ------------------------
      EVENTS SECTION
   -------------------------*/
-  document.getElementById("events-title").textContent = section.events.section_title;
+  const eventsConfig = section.events || {};
+  document.getElementById("events-title").textContent = eventsConfig.section_title || "";
 
   const eventsList = document.getElementById("events-list");
   eventsList.innerHTML = "";
 
-  section.events.items.forEach(e => {
-    const li = document.createElement("li");
-    li.innerHTML = `
-      <span class="event-date">
-        <span class="event-month">${e.month}</span>
-        <span class="event-day">${e.day}</span>
-      </span>
-      <div class="event-info">
-        <h4>${e.title}</h4>
-        <p>${e.text}</p>
-      </div>
-    `;
-    eventsList.appendChild(li);
-  });
-
   document.getElementById("events-view-all").textContent = "View all events";
-  document.getElementById("events-view-all").href = section.events.view_all_link;
+  document.getElementById("events-view-all").href = eventsConfig.view_all_link || "#";
+
+  const monthIndexMap = {
+    JAN: 0,
+    FEB: 1,
+    MAR: 2,
+    APR: 3,
+    MAY: 4,
+    JUN: 5,
+    JUL: 6,
+    AUG: 7,
+    SEP: 8,
+    OCT: 9,
+    NOV: 10,
+    DEC: 11
+  };
+
+  function getEventTimestamp(item) {
+    if (!item) return 0;
+
+    const year = Number.parseInt(item.year, 10);
+    const monthKey = String(item.month || "").trim().slice(0, 3).toUpperCase();
+    const monthIndex = monthIndexMap[monthKey];
+    const day = Number.parseInt(item.day, 10);
+
+    if (!Number.isFinite(year) || !Number.isFinite(day) || monthIndex === undefined) {
+      return 0;
+    }
+
+    return Date.UTC(year, monthIndex, day);
+  }
+
+  fetch("pages/events/events.json")
+    .then(res => {
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return res.json();
+    })
+    .then(data => {
+      const items = Array.isArray(data.items) ? data.items : [];
+
+      const latest = items
+        .filter(item => item && item.title)
+        .sort((a, b) => getEventTimestamp(b) - getEventTimestamp(a))
+        .slice(0, 4);
+
+      if (!latest.length) {
+        const li = document.createElement("li");
+        li.textContent = "No events published yet.";
+        eventsList.appendChild(li);
+        return;
+      }
+
+      latest.forEach(item => {
+        const li = document.createElement("li");
+        li.innerHTML = `
+          <span class="event-date">
+            <span class="event-month">${item.month || ""}</span>
+            <span class="event-day">${item.day || ""}</span>
+          </span>
+          <div class="event-info">
+            <h4>${item.title}</h4>
+            <p>${item.text || ""}</p>
+          </div>
+        `;
+        eventsList.appendChild(li);
+      });
+    })
+    .catch(err => {
+      console.error("Events load error:", err);
+      const li = document.createElement("li");
+      li.textContent = "Unable to load events right now.";
+      eventsList.appendChild(li);
+    });
 }
 
 

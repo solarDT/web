@@ -1,0 +1,42 @@
+{
+  "section_title": "Upcoming Events",
+  "items": [
+    {
+      "month": "FEB",
+      "day": "08",
+      "year": "2026",
+      "title": "Tender Opening",
+      "text": "Tender opening for vendors in MIST campus.",
+      "link": "",
+      "link_label": ""
+    },
+    {
+      "month": "JAN",
+      "day": "22",
+      "year": "2026",
+      "title": "Pre-Bid Meeting",
+      "text": "Pre Bid meeting with vendors in MIST campus.",
+      "link": "#",
+      "link_label": "View event"
+    },
+     {
+      "month": "JAN",
+      "day": "15",
+      "year": "2026",
+      "title": "Tender Flashing",
+      "text": "Tender flashing for vendors in News Paper and Website.",
+      "link": "https://epaper.ittefaq.com.bd/edition/2508/1st-edition/page/5",
+      "link_label": "View circular"
+    },
+     {
+      "month": "Sept",
+      "day": "29",
+      "year": "2025",
+      "title": "Grant Signing Ceremony",
+      "text": "Grant signing ceremony with BEPRC.",
+      "link": "https://mist.ac.bd/blog/eece/post/project_from_beprc-449",
+      "link_label": "Read More"
+    }
+  ],
+  "view_all_link": "pages/events/events.html"
+}

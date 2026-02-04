@@ -6,11 +6,11 @@ async function loadEvents() {
   const list = document.getElementById("events-list");
 
   try {
-    const res = await fetch("../../content.json");
+    const res = await fetch("events.json");
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
     const data = await res.json();
-    const items = data.news_events?.events?.items;
+    const items = data.items;
     renderEvents(Array.isArray(items) ? items : []);
   } catch (err) {
     list.innerHTML = `<div class="empty-state">Unable to load events (${err.message}).</div>`;

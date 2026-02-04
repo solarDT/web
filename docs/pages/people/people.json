@@ -37,7 +37,6 @@
           "image": "../../assets/people/ahsanSir.jpg",
           "image_side": "right",
           "description": [
-            "Mr. Ahsan coordinates interdisciplinary collaborations.",
             "His work spans Power system, Renewable Energy,  Smart Grid ,Energy Management, Demand Response, Energy Storage, Energy Audit, Artificial Intelligence, Machine and Deep Learning, Demand Forecasting"
           ],
           "links": [
@@ -52,7 +51,6 @@
           "image_width": "300px",
           "image_shape": "rounded",
           "description": [
-            "Dr. Shah leads the Smart Grid & Sustainable Energy Transition Lab.",
             "His research interests include Renewable Energy Technologies, Energy Harvesting and Storage, Power System Protection, Power System Reliability & Stability, Grid Integration of Inverter Based Resources and Application of AI in Power System and grid modernization."
           ], 
           "links": [
@@ -65,8 +63,7 @@
           "image": "../../assets/people/monirSir.jpg",
           "image_side": "right",
           "description": [
-            "Mr. Monir leads research teams and provides consultation on advanced engineering projects.",
-            "His work spans Power System and Energy Study"
+            "He is SREDA approved energy Auditor. His work spans Power System and Energy Study"
           ],
           "links": [
             { "label": "View Profile", "link": "https://scholar.google.com/citations?user=jmBR1XcAAAAJ&hl=en&authuser=1&oi=ao" }
@@ -78,7 +75,6 @@
           "image": "../../assets/people/Naim sir.jpg",
           "image_side": "left",
           "description": [
-            "Mr. Naim oversees embedded systems and AI research initiatives.",
             "His work spans Embedded Systems, Artificial Intelligence (AI), Microprocessors, Microcontrollers and Programmable Circuits, Robotics, Smart Power System System"
           ],
           "links": [

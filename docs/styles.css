@@ -656,6 +656,37 @@ img {
   color: var(--color-text-muted);
 }
 
+.card-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.card-bullets li {
+  display: grid;
+  grid-template-columns: 0.9rem 1fr;
+  gap: 0.6rem;
+  align-items: start;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+.card-bullets li::before {
+  content: "";
+  width: 0.55rem;
+  height: 0.55rem;
+  margin-top: 0.38rem;
+  border-radius: 999px;
+  background: var(--color-primary);
+  box-shadow:
+    0 0 0 4px rgba(34, 195, 255, 0.12),
+    0 0 14px rgba(34, 195, 255, 0.65),
+    0 0 30px rgba(34, 195, 255, 0.25);
+}
+
 .card-link {
   font-size: 0.88rem;
   color: var(--color-primary);

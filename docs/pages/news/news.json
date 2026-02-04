@@ -5,12 +5,19 @@
   },
   "items": [
     {
-      "id": "sample-news",
-      "title": "Sample: Lab Update Announcement",
-      "date": "29 Jan 2026",
-      "category": "Notice Board",
-      "summary": "This is a sample news item. Replace the image and Word document with your real news content.",
-      "image": "../../assets/galary/cc.png",
+      "id": "PreBid Meeting",
+      "title": "Pre-Bid Meeting",
+      "date": "22 Jan 2026",
+      "summary": "On 22th Jan PreBid meeting has taken place at the Library Room of EECE Dept. Massive participation from different reputed vendors.",
+      "image": "../../assets/news/images/meeting.webp",
+      "word_file": "../../assets/news/docx/sample-news.docx"
+    },
+    {
+      "id": "contractSigned",
+      "title": "Contract Signed between BEPRC & MIST EECE Dept.",
+      "date": "29 Sep 2025",
+      "summary": "On 29 September 2025, Bangladesh Energy and Power Research Council (BEPRC) hosted the contract signing ceremony with MIST EECE Department.",
+      "image": "../../assets/galary/cc1.png",
       "word_file": "../../assets/news/docx/sample-news.docx"
     }
   ]

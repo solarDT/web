@@ -152,43 +152,11 @@
 
     "news": {
       "section_title": "Latest News",
-      "items": [
-        {
-          "title": "Contract Signed between BEPRC & MIST EECE Dept.",
-          "text": "On 29 September 2025, Bangladesh Energy and Power Research Council (BEPRC) hosted the contract.....",
-          "link": "https://mist.ac.bd/department/eece/announcement/644/between_beprc_mist_eece_dept"
-        },
-        {
-          "title": "",
-          "text": "",
-          "link": "#"
-        }
-      ],
       "view_all_link": "pages/news/news.html"
     },
 
     "events": {
       "section_title": "Upcoming Events",
-      "items": [
-        {
-          "month": "JAN",
-          "day": "15",
-          "year": "2026",
-          "title": "Tender Flashing",
-          "text": "Tender flashing for vendors in News Paper and Website.",
-          "link": "assets/research/agreement.pdf",
-          "link_label": "View circular"
-        },
-        {
-          "month": "JAN",
-          "day": "22",
-          "year": "2026",
-          "title": "Pre-Bid Meeting",
-          "text": "Pre Bid meeting with vendors in MIST campus.",
-          "link": "#",
-          "link_label": "View event"
-        }
-      ],
       "view_all_link": "pages/events/events.html"
     }
   },
@@ -207,22 +175,22 @@
 
     "cards": [
       {
-        "title": "Educate",
-        "text": "Students gain hands-on experience in energy systems, grid modernization, and sustainable infrastructure through curated curricula and design projects.",
-        "link_label": "Learn about our programs",
-        "link": "#"
+        "title": "Research Activities",
+        "text": "• Power system modeling and simulation<br>• Hardware-in-the-loop and software-based analysis<br>• Field measurements and data collection<br>• Pilot and demonstration projects",
+        "link_label": "",
+        "link": ""
       },
       {
-        "title": "Innovate",
-        "text": "Interdisciplinary teams collaborate on applied research...",
-        "link_label": "Explore research areas",
-        "link": "#"
+        "title": "Academic Activities",
+        "text": "• Research seminars and technical talks<br>• Guest lectures by industry and academic experts<br>• Short courses and professional training programs<br>• Conference and workshop organization",
+        "link_label": "",
+        "link": ""
       },
       {
-        "title": "Collaborate",
-        "text": "Industry partners co-create projects...",
-        "link_label": "View industry partnerships",
-        "link": "#"
+        "title": "Student Engagement",
+        "text": "• Undergraduate and postgraduate thesis supervision<br>• Research internships and assistantships<br>• Student competitions, hackathons, and innovation challenges",
+        "link_label": "",
+        "link": ""
       }
     ]
   },
@@ -319,19 +287,9 @@
       "title": "Resources",
       "title_style": { "text_color": "#F5FAFC", "font_size": "0.95rem" },
       "links": [
-        { "label": "News", "link": "#" },
-        { "label": "Employment", "link": "#" },
+        { "label": "News", "link": "pages/news/news.html" },
+        { "label": "Events", "link": "pages/events/events.html" },
         { "label": "Internal Resources", "link": "#" }
-      ],
-      "link_style": { "text_color": "#F5FAFC", "font_size": "0.85rem" }
-    },
-    {
-      "title": "Campus Resources",
-      "title_style": { "text_color": "#F5FAFC", "font_size": "0.95rem" },
-      "links": [
-        { "label": "Maps & Directions", "link": "#" },
-        { "label": "Parking & Transportation", "link": "#" },
-        { "label": "Library", "link": "#" }
       ],
       "link_style": { "text_color": "#F5FAFC", "font_size": "0.85rem" }
     }
