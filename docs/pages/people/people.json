@@ -32,20 +32,8 @@
 
       "items": [ 
         {
-          "name": "Md Ahsan Kabir",
-          "role": "Associate Professor",
-          "image": "../../assets/people/ahsanSir.jpg",
-          "image_side": "right",
-          "description": [
-            "His work spans Power system, Renewable Energy,  Smart Grid ,Energy Management, Demand Response, Energy Storage, Energy Audit, Artificial Intelligence, Machine and Deep Learning, Demand Forecasting"
-          ],
-          "links": [
-            { "label": "View Profile", "link": "https://scholar.google.com/citations?user=Nt4Lv9AAAAAJ&hl=en" }
-          ]
-        },
-        {
           "name": "Maj. Shah Mohazzem Hossain, PhD",
-          "role": "Assistant Professor",
+          "role": "Instructor Class B, EECE, MIST.",
           "image": "../../assets/people/moajjemSir.jpg",
           "image_side": "left",
           "image_width": "300px",
@@ -58,20 +46,20 @@
           ]
         },
         {
-          "name": "Hasan Monir",
-          "role": "Assistant Professor",
-          "image": "../../assets/people/monirSir.jpg",
+          "name": "Md Ahsan Kabir",
+          "role": "Associate Professor, EECE, MIST.",
+          "image": "../../assets/people/ahsanSir.jpg",
           "image_side": "right",
           "description": [
-            "He is SREDA approved energy Auditor. His work spans Power System and Energy Study"
+            "His work spans Power system, Renewable Energy,  Smart Grid ,Energy Management, Demand Response, Energy Storage, Energy Audit, Artificial Intelligence, Machine and Deep Learning, Demand Forecasting"
           ],
           "links": [
-            { "label": "View Profile", "link": "https://scholar.google.com/citations?user=jmBR1XcAAAAJ&hl=en&authuser=1&oi=ao" }
+            { "label": "View Profile", "link": "https://scholar.google.com/citations?user=Nt4Lv9AAAAAJ&hl=en" }
           ]
         },
         {
           "name": "Mohammad Naim Uddin",
-          "role": "Senior Lecturer",
+          "role": "Senior Lecturer, EECE, MIST.",
           "image": "../../assets/people/Naim sir.jpg",
           "image_side": "left",
           "description": [
@@ -80,7 +68,20 @@
           "links": [
             { "label": "View Profile", "link": "https://www.mist.ac.bd/department/eece/facultyMembers/mohammad_naim_uddin-773" }
           ]
+        },
+        {
+          "name": "Hasan Monir",
+          "role": "Assistant Professor, EECE, MIST.",
+          "image": "../../assets/people/monirSir.jpg",
+          "image_side": "right",
+          "description": [
+            "He is SREDA approved energy Auditor. His work spans Power System and Energy Study"
+          ],
+          "links": [
+            { "label": "View Profile", "link": "https://scholar.google.com/citations?user=jmBR1XcAAAAJ&hl=en&authuser=1&oi=ao" }
+          ]
         }
+        
       ]
     },
 
