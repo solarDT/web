@@ -48,17 +48,17 @@
       "link": "pages/research/ongoing_list.html",
       "submenu": [
         { "label": "Ongoing", "link": "pages/research/ongoing_list.html" },
-        { "label": "Completed", "link": "#" }
+        { "label": "%Completed%", "link": "#" }
       ]
     },
     {
       "label": "Publications",
       "link": "#",
       "submenu": [
-        { "label": "Journal Papers", "link": "#" },
-        { "label": "Conference Papers", "link": "#" },
-        { "label": "Book Chapters", "link": "#" },
-        { "label": "Patents", "link": "#" }
+        { "label": "%Journal Papers%", "link": "#" },
+        { "label": "%Conference Papers%", "link": "#" },
+        { "label": "%Book Chapters%", "link": "#" },
+        { "label": "%Patents%", "link": "#" }
       ]
     }
   ],
@@ -231,13 +231,8 @@
 
     "items": [
       {
-        "name": "Electrical Electronic and Communication Engineering",
+        "name": "Electrical, Electronic and Communication Engineering",
         "link": "https://mist.ac.bd/department/eece"
-      },
-  
-      {
-        "name": "Industrial & Production Engineering",
-        "link": "https://mist.ac.bd/department/ipe"
       }
     ]
   },

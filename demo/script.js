@@ -24,15 +24,30 @@ function applyBranding(brand) {
   if (brand.ribbon_bg) header.style.background = brand.ribbon_bg;
 }
 
+function isCommentToken(value) {
+  if (typeof value !== "string") return false;
+  const trimmed = value.trim();
+  return (
+    trimmed.startsWith("%%") ||
+    (trimmed.startsWith("%") && trimmed.endsWith("%") && trimmed.length > 1)
+  );
+}
+
 function buildMenu(menuItems) {
   const container = document.getElementById("menu-container");
   container.innerHTML = "";
 
-  menuItems.forEach(item => {
+  (menuItems || []).forEach(item => {
+    if (!item || isCommentToken(item.label)) return;
+
+    const submenuItems = Array.isArray(item.submenu)
+      ? item.submenu.filter(sub => sub && !isCommentToken(sub.label))
+      : [];
+
     const li = document.createElement("li");
     li.classList.add("nav-item");
 
-    if (item.submenu && item.submenu.length > 0) {
+    if (submenuItems.length > 0) {
       li.classList.add("nav-has-dropdown");
 
       const btn = document.createElement("button");
@@ -42,7 +57,7 @@ function buildMenu(menuItems) {
       const dropdown = document.createElement("ul");
       dropdown.classList.add("nav-dropdown");
 
-      item.submenu.forEach(sub => {
+      submenuItems.forEach(sub => {
         const s = document.createElement("li");
         const a = document.createElement("a");
         a.href = sub.link;

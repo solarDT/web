@@ -75,6 +75,20 @@ function applyHeader(site, branding) {
 }
 
 
+function isCommentToken(value) {
+  if (typeof value !== "string") return false;
+  const trimmed = value.trim();
+
+  // Allow quick "comment out" markers inside JSON strings, e.g.:
+  // - "%%Menu Label"  -> ignored
+  // - "%Menu Label%"  -> ignored
+  return (
+    trimmed.startsWith("%%") ||
+    (trimmed.startsWith("%") && trimmed.endsWith("%") && trimmed.length > 1)
+  );
+}
+
+
 // function buildMenu(menuItems) {
 //   const container = document.getElementById("menu-container");
 //   container.innerHTML = "";
@@ -118,13 +132,20 @@ function applyHeader(site, branding) {
 
 function buildMenu(menuItems) {
   const container = document.getElementById("menu-container");
+  if (!container) return;
   container.innerHTML = "";
 
-  menuItems.forEach(item => {
+  (menuItems || []).forEach(item => {
+    if (!item || isCommentToken(item.label)) return;
+
+    const submenuItems = Array.isArray(item.submenu)
+      ? item.submenu.filter(sub => sub && !isCommentToken(sub.label))
+      : [];
+
     const li = document.createElement("li");
     li.classList.add("nav-item");
 
-    if (item.submenu && item.submenu.length > 0) {
+    if (submenuItems.length > 0) {
       li.classList.add("nav-has-dropdown");
 
       // If parent has link, use <a>, else use <button>
@@ -144,7 +165,7 @@ function buildMenu(menuItems) {
       const dropdown = document.createElement("ul");
       dropdown.classList.add("nav-dropdown");
 
-      item.submenu.forEach(sub => {
+      submenuItems.forEach(sub => {
         const s = document.createElement("li");
         const a = document.createElement("a");
         a.href = sub.link;
