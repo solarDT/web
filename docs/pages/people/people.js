@@ -98,7 +98,7 @@ function renderLeaderSection(parent, sec) {
     if (item.image_side === "right") content.classList.add("right");
 
     const img = document.createElement("img");
-    img.src = item.image;
+    setImageSource(img, item.image);
     applyImageSizeAndShape(img, item, sec);
 
     const info = document.createElement("div");
@@ -160,7 +160,7 @@ function renderResearcherSection(parent, sec) {
     content.classList.add("researcher-content");
 
     const img = document.createElement("img");
-    img.src = item.image;
+    setImageSource(img, item.image);
     applyImageSizeAndShape(img, item, sec);
 
     const text = document.createElement("div");
@@ -211,7 +211,7 @@ function renderGroupSection(parent, sec) {
     card.classList.add("group-card");
 
     const img = document.createElement("img");
-    img.src = item.image;
+    setImageSource(img, item.image);
     applyImageSizeAndShape(img, item, sec);
     card.appendChild(img);
 
@@ -239,6 +239,13 @@ function applyImageSizeAndShape(img, item, sec) {
   const w = item.image_width || sec.image_width;
   if (w) img.style.width = w;
 
+  const h = item.image_height || sec.image_height;
+  if (h) {
+    img.style.height = h;
+    img.style.objectFit = "cover";
+    img.style.objectPosition = item.image_position || sec.image_position || "center";
+  }
+
   const shape = (item.image_shape || sec.image_shape || "rounded").toLowerCase();
   img.classList.remove("shape-rounded", "shape-square", "shape-circle");
 
@@ -247,10 +254,94 @@ function applyImageSizeAndShape(img, item, sec) {
   else img.classList.add("shape-rounded");
 }
 
+/*******************************************
+ HEIC IMAGE SUPPORT
+********************************************/
+const HEIC_CONVERTER_URL =
+  "https://cdn.jsdelivr.net/npm/heic2any@0.0.4/dist/heic2any.min.js";
+let heicConverterPromise;
+const heicConversionPromises = new Map();
+
+function setImageSource(img, src) {
+  if (!src) return;
+
+  if (isHeicImage(src)) {
+    img.addEventListener("error", () => {
+      convertHeicImage(src)
+        .then(convertedSrc => {
+          img.src = convertedSrc;
+        })
+        .catch(error => {
+          console.warn("Unable to load HEIC image:", src, error);
+        });
+    }, { once: true });
+  }
+
+  img.src = src;
+}
+
+function isHeicImage(src) {
+  return /\.hei[cf](?:[?#].*)?$/i.test(src);
+}
+
+function loadHeicConverter() {
+  if (window.heic2any) return Promise.resolve(window.heic2any);
+  if (heicConverterPromise) return heicConverterPromise;
+
+  heicConverterPromise = new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = HEIC_CONVERTER_URL;
+    script.async = true;
+    script.onload = () => {
+      if (window.heic2any) resolve(window.heic2any);
+      else reject(new Error("HEIC converter did not initialize."));
+    };
+    script.onerror = () => reject(new Error("Unable to load HEIC converter."));
+    document.head.appendChild(script);
+  });
+
+  return heicConverterPromise;
+}
+
+function convertHeicImage(src) {
+  if (heicConversionPromises.has(src)) return heicConversionPromises.get(src);
+
+  const conversionPromise = loadHeicConverter()
+    .then(converter => fetch(src)
+      .then(response => {
+        if (!response.ok) throw new Error(`Unable to fetch ${src}`);
+        return response.blob();
+      })
+      .then(blob => converter({
+        blob,
+        toType: "image/jpeg",
+        quality: 0.9
+      })))
+    .then(result => {
+      const convertedBlob = Array.isArray(result) ? result[0] : result;
+      return URL.createObjectURL(convertedBlob);
+    });
+
+  heicConversionPromises.set(src, conversionPromise);
+  return conversionPromise;
+}
+
 function getDominantColor(imageSrc, callback) {
   const img = new Image();
   img.crossOrigin = "anonymous";
-  img.src = imageSrc;
+
+  if (isHeicImage(imageSrc)) {
+    img.onerror = () => {
+      convertHeicImage(imageSrc)
+        .then(convertedSrc => {
+          img.onerror = null;
+          img.src = convertedSrc;
+        })
+        .catch(error => {
+          console.warn("Unable to read HEIC image color:", imageSrc, error);
+        });
+    };
+  }
 
   img.onload = function () {
     const canvas = document.createElement("canvas");
@@ -274,5 +365,7 @@ function getDominantColor(imageSrc, callback) {
 
     callback(`rgb(${r},${g},${b})`);
   };
+
+  img.src = imageSrc;
 }
 
