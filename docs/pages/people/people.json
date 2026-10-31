@@ -32,10 +32,24 @@
 
       "items": [ 
         {
+          "title": "Advisor",
+          "name": "Brig Gen K M Mustafizur Rahman, psc",
+          "role": "Head of the Dept. of EECE, MIST",
+          "image": "../../assets/people/advisor.jpg",
+          "image_side": "left",
+          "description": [
+            "He serves as Advisor to the Smart Grid & Sustainable Energy Transition Lab at MIST."
+          ],
+          "links": [
+            { "label": "View Profile", "link": "https://mist.ac.bd/department/electrical_electronic_and_communication_engineering/faculty-members/brigadier-general-k-m-mustafizur-rahman-psc" }
+          ]
+        },
+        {
+          "title": "Director",
           "name": "Maj. Shah Mohazzem Hossain, PhD",
           "role": "Instructor Class B, EECE, MIST.",
           "image": "../../assets/people/moajjemSir.jpg",
-          "image_side": "left",
+          "image_side": "right",
           "image_width": "300px",
           "image_shape": "rounded",
           "description": [
@@ -46,10 +60,11 @@
           ]
         },
         {
+          "title": "Associate Director, R&C",
           "name": "Md Ahsan Kabir",
           "role": "Associate Professor, EECE, MIST.",
           "image": "../../assets/people/ahsanSir.jpg",
-          "image_side": "right",
+          "image_side": "left",
           "description": [
             "His work spans Power system, Renewable Energy,  Smart Grid ,Energy Management, Demand Response, Energy Storage, Energy Audit, Artificial Intelligence, Machine and Deep Learning, Demand Forecasting"
           ],
@@ -58,10 +73,11 @@
           ]
         },
         {
-          "name": "Mohammad Naim Uddin",
+          "title": "Associate Director, T&D",
+          "name": "Maj. Mohammad Naim Uddin",
           "role": "Senior Lecturer, EECE, MIST.",
           "image": "../../assets/people/Naim sir.jpg",
-          "image_side": "left",
+          "image_side": "right",
           "description": [
             "His work spans Embedded Systems, Artificial Intelligence (AI), Microprocessors, Microcontrollers and Programmable Circuits, Robotics, Smart Power System System"
           ],
@@ -70,10 +86,11 @@
           ]
         },
         {
+          "title": "Associate Director, T&D",
           "name": "Hasan Monir",
           "role": "Assistant Professor, EECE, MIST.",
           "image": "../../assets/people/monirSir.jpg",
-          "image_side": "right",
+          "image_side": "left",
           "description": [
             "He is SREDA approved energy Auditor. His work spans Power System and Energy Study"
           ],
@@ -108,23 +125,14 @@
           "image": "../../assets/people/tanvir.jpg",
           "image_width": "170px",
           "image_shape": "",
-          "link": "#"
+          "link": "https://tanvirsahed.github.io/Portfolio/pages/home/home.html"
         },
         {
-          "name": "Md Tanjil Islam Aronno",
-          "title": "Graduate Research Assistant",
-          "bio": "Focus: AI/ML, Power Systems, Renewable Energy",
-          "image": "../../assets/people/aronno.jpg",
-          "image_width": "170px",
-          "image_shape": "",
-          "link": "#"
-        },
-        {
-          "name": "Md. Sabbir Hossain Molla",
+          "name": "Semanto Banerjee",
           "title": "Graduate Research Assistant",
           "bio": "Focus: AI/ML, Power Electronics",
-          "image": "../../assets/people/sabbir.jpg",
-          "link": "#"
+          "image": "../../assets/people/semanto.jpg",
+          "link": "https://www.linkedin.com/in/semanto-banerjee-mist087/"
         },
         {
           "name": "Rawnak Tanzim",
@@ -261,7 +269,22 @@
       "image_shape": "rounded",
 
       "items": [
-        
+        {
+          "name": "Md. Sabbir Hossain Molla",
+          "title": "Graduate Research Assistant",
+          "bio": "Focus: AI/ML, Power Electronics",
+          "image": "../../assets/people/sabbir.jpg",
+          "link": "#"
+        },
+        {
+          "name": "Md Tanjil Islam Aronno",
+          "title": "Graduate Research Assistant",
+          "bio": "Focus: AI/ML, Power Systems, Renewable Energy",
+          "image": "../../assets/people/aronno.jpg",
+          "image_width": "170px",
+          "image_shape": "",
+          "link": "#"
+        }
           
       ]
     }

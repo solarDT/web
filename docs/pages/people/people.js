@@ -98,6 +98,7 @@ function renderLeaderSection(parent, sec) {
     if (item.image_side === "right") content.classList.add("right");
 
     const img = document.createElement("img");
+    img.alt = item.name;
     setImageSource(img, item.image);
     applyImageSizeAndShape(img, item, sec);
 
@@ -108,6 +109,13 @@ function renderLeaderSection(parent, sec) {
       <h3>${item.name}</h3>
       <p><strong>${item.role}</strong></p>
     `;
+
+    if (item.title) {
+      const title = document.createElement("p");
+      title.classList.add("leader-title");
+      title.textContent = item.title;
+      info.prepend(title);
+    }
 
     (item.description || []).forEach(t => {
       const p = document.createElement("p");

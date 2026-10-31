@@ -187,6 +187,23 @@ body.people-page {
   grid-template-columns: minmax(0, 1fr) minmax(0, 300px);
 }
 
+.leader-block img {
+  max-width: 100%;
+  height: auto;
+}
+
+.leader-info .leader-title {
+  display: inline-block;
+  margin: 0 0 0.75rem;
+  padding: 0.35rem 0.85rem;
+  border: 1px solid rgba(34, 195, 255, 0.35);
+  border-radius: 999px;
+  background: rgba(34, 195, 255, 0.12);
+  color: var(--accent);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
 .leader-info h3 {
   margin: 0 0 0.3rem;
 }
